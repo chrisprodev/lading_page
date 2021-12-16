@@ -36,6 +36,7 @@ const MainContainer = styled.nav`
   left: 0;
   right: 0;
   z-index: 999;
+  background: #16161e;
 `
 
 const Container = styled.div`
@@ -47,6 +48,7 @@ const Container = styled.div`
   margin-top: 2.4rem;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 2rem;
 
   .navbar-container__loginbtn {
     width: 12rem;

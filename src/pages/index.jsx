@@ -1,15 +1,16 @@
 import React from "react"
 import NavBar from "../components/NavBar"
-import styled from "styled-components"
+import { faqs, logosData } from "../constants/data"
 import "../global.css"
 import { Link } from "gatsby"
+import * as Style from "./index.Styles"
+import Faq from "../components/Faq"
 
 export default function Home() {
-  const logos = [1, 2, 3, 4, 5]
   return (
     <div>
       <NavBar />
-      <Header>
+      <Style.Header>
         <h1>Explainer videos made simple</h1>
         <p>Scale your business with unlimited video editing.</p>
         <span className="header__btn">
@@ -43,11 +44,11 @@ export default function Home() {
             fill="url(#radial-gradient)"
           />
         </svg>
-      </Header>
-      <Logos>
+      </Style.Header>
+      <Style.Logos>
         <h5>Used by top designers from the world's top companies</h5>
         <div className="logos__container">
-          {logos.map(logo => (
+          {logosData.map(logo => (
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="165"
@@ -64,9 +65,9 @@ export default function Home() {
             </svg>
           ))}
         </div>
-      </Logos>
-      <Features>
-        <Feature>
+      </Style.Logos>
+      <Style.Features>
+        <Style.Feature>
           <svg
             xmlns="http://www.w3.org/2000/svg"
             width="416"
@@ -103,7 +104,7 @@ export default function Home() {
               Replace dozens of tools, save money, and manage your entire video
               business needs from anywhere with one simple platform.
             </p>
-            <MiniFeatures>
+            <Style.MiniFeatures>
               <div className="mini-features__description">
                 <h4>Easy to use</h4>
                 <p>
@@ -115,8 +116,8 @@ export default function Home() {
                 <h4>Tell your story</h4>
                 <p>Produce material that engages and grows your audiences.</p>
               </div>
-            </MiniFeatures>
-            <MiniFeatures>
+            </Style.MiniFeatures>
+            <Style.MiniFeatures>
               <div className="mini-features__description">
                 <h4>Add subtitles</h4>
                 <p>
@@ -128,10 +129,10 @@ export default function Home() {
                 <h4>Sound design</h4>
                 <p>Produce material that engages and grows your audiences.</p>
               </div>
-            </MiniFeatures>
+            </Style.MiniFeatures>
           </div>
-        </Feature>
-        <Feature>
+        </Style.Feature>
+        <Style.Feature>
           <div className="feature__main-feature feature__main-feature--right">
             <p className="main-feature__mini-title">Grow your business</p>
             <h2>Market your products</h2>
@@ -140,7 +141,7 @@ export default function Home() {
               video editor on staff who needs support or you are handling the
               creative on your own.
             </p>
-            <MiniFeatures>
+            <Style.MiniFeatures>
               <div className="mini-features__description">
                 <h4>Deliverables in Days</h4>
                 <p>
@@ -155,8 +156,8 @@ export default function Home() {
                   intuitive and engaging portal.
                 </p>
               </div>
-            </MiniFeatures>
-            <MiniFeatures>
+            </Style.MiniFeatures>
+            <Style.MiniFeatures>
               <div className="mini-features__description">
                 <h4>Cost Efficiency</h4>
                 <p>
@@ -170,7 +171,7 @@ export default function Home() {
                   Our team has video editors with over 10 years of experience.
                 </p>
               </div>
-            </MiniFeatures>
+            </Style.MiniFeatures>
           </div>
           <svg
             xmlns="http://www.w3.org/2000/svg"
@@ -187,8 +188,8 @@ export default function Home() {
                 gradientTransform="matrix(0.212, 0.977, -2.889, 0.628, 0, 0)"
                 gradientUnits="objectBoundingBox"
               >
-                <stop offset="0" stop-color="#e57a62" />
-                <stop offset="1" stop-color="#813cc4" />
+                <stop offset="0" stop-color="#7D47E2" />
+                <stop offset="1" stop-color="#447F8C" />
               </radialGradient>
             </defs>
             <rect
@@ -199,124 +200,22 @@ export default function Home() {
               fill="url(#radial-gradient)"
             />
           </svg>
-        </Feature>
-      </Features>
+        </Style.Feature>
+      </Style.Features>
+      <Style.Testimonials>
+        <p className="testimonials__mini-title">Elevate your business</p>
+        <h2>Take your business to the next level</h2>
+        <p>
+          Become part of a growing community of innovative Entrepreneurs,
+          Marketers and Agencies.
+        </p>
+      </Style.Testimonials>
+      <Style.FAQs>
+        <h2>Frequently asked questions</h2>
+        {faqs.map(question => (
+          <Faq title={question.title} content={question.content} />
+        ))}
+      </Style.FAQs>
     </div>
   )
 }
-
-const Header = styled.header`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 129rem;
-  margin-top: 19.2rem;
-  margin-left: auto;
-  margin-right: auto;
-
-  p {
-    margin-top: 2rem;
-  }
-
-  .header__btn {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4rem;
-    background: var(--purple);
-    width: 12rem;
-    height: 4.4rem;
-    margin-top: 3.6rem;
-
-    a {
-      color: #eff5f8;
-      font-size: 1.6rem;
-    }
-  }
-
-  svg {
-    margin-top: 4.8rem;
-  }
-`
-
-const Logos = styled.section`
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 100%;
-  max-width: 129rem;
-  margin-top: 10rem;
-  margin-left: auto;
-  margin-right: auto;
-
-  h5 {
-    font-size: 1.6rem;
-    color: var(--gray);
-  }
-
-  .logos__container {
-    margin-top: 3.4rem;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-
-    svg {
-      opacity: 0.1;
-    }
-  }
-`
-const Features = styled.section`
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: 100%;
-  max-width: 129rem;
-  margin-top: 3rem;
-  margin-left: auto;
-  margin-right: auto;
-`
-const Feature = styled.div`
-  margin-top: 20rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  svg {
-    flex-shrink: 0;
-  }
-
-  .feature__main-feature {
-    margin-left: 12.4rem;
-
-    h2,
-    p {
-      margin-top: 2rem;
-    }
-
-    .main-feature__mini-title {
-      font-size: 1.6rem;
-      color: var(--white);
-    }
-  }
-
-  .feature__main-feature--right {
-    margin-left: 0;
-    margin-right: 12.4rem;
-  }
-`
-
-const MiniFeatures = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin-top: 9rem;
-
-  .mini-features__description {
-    max-width: 29rem;
-    p {
-      font-size: 1.6rem;
-      margin-top: 2.4rem;
-      line-height: 2.8rem;
-    }
-  }
-`
