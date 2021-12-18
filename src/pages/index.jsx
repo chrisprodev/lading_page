@@ -1,10 +1,11 @@
 import React from "react"
 import NavBar from "../components/NavBar"
-import { faqs, logosData } from "../constants/data"
-import "../global.css"
-import { Link } from "gatsby"
 import * as Style from "./index.Styles"
+import { Link } from "gatsby"
 import Faq from "../components/Faq"
+import { faqs, logosData, testimonials } from "../constants/data"
+import "../global.css"
+import TestimonialCard from "../components/TestimonialCard"
 
 export default function Home() {
   return (
@@ -96,10 +97,7 @@ export default function Home() {
             />
           </svg>
           <div className="feature__main-feature">
-            <p className="main-feature__mini-title">
-              The Ultimate Creative Solution
-            </p>
-            <h2>One simple platform</h2>
+            <h2>The Ultimate Creative Solution</h2>
             <p>
               Replace dozens of tools, save money, and manage your entire video
               business needs from anywhere with one simple platform.
@@ -134,7 +132,6 @@ export default function Home() {
         </Style.Feature>
         <Style.Feature>
           <div className="feature__main-feature feature__main-feature--right">
-            <p className="main-feature__mini-title">Grow your business</p>
             <h2>Market your products</h2>
             <p>
               Position your marketing team for rapid growth. Whether you have a
@@ -203,12 +200,21 @@ export default function Home() {
         </Style.Feature>
       </Style.Features>
       <Style.Testimonials>
-        <p className="testimonials__mini-title">Elevate your business</p>
         <h2>Take your business to the next level</h2>
         <p>
           Become part of a growing community of innovative Entrepreneurs,
           Marketers and Agencies.
         </p>
+        <Style.TestimonialsGrid>
+          {testimonials.map(element => (
+            <TestimonialCard
+              user={element.user}
+              account={element.account}
+              body={element.description}
+              date={element.date}
+            />
+          ))}
+        </Style.TestimonialsGrid>
       </Style.Testimonials>
       <Style.FAQs>
         <h2>Frequently asked questions</h2>

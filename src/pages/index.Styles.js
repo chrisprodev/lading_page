@@ -20,7 +20,7 @@ export const Header = styled.header`
     align-items: center;
     border-radius: 4rem;
     background: var(--purple);
-    width: 12rem;
+    width: 14rem;
     height: 4.4rem;
     margin-top: 3.6rem;
 
@@ -72,7 +72,7 @@ export const Features = styled.section`
   margin-right: auto;
 `
 export const Feature = styled.div`
-  margin-top: 20rem;
+  margin-top: 22rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -122,7 +122,7 @@ export const Testimonials = styled.section`
   flex-direction: column;
   width: 100%;
   max-width: 129rem;
-  margin-top: 20rem;
+  margin-top: 23rem;
   margin-left: auto;
   margin-right: auto;
 
@@ -144,7 +144,13 @@ export const FAQs = styled.section`
   flex-direction: column;
   width: 100%;
   max-width: 129rem;
-  margin-top: 20rem;
+  margin-top: 23rem;
   margin-left: auto;
   margin-right: auto;
+`
+
+export const TestimonialsGrid = styled.div`
+  margin-top: 5rem;
+  columns: 3 auto;
+  column-gap: 2rem;
 `
