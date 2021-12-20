@@ -6,10 +6,11 @@ import Faq from "../components/Faq"
 import { faqs, logosData, testimonials } from "../constants/data"
 import "../global.css"
 import TestimonialCard from "../components/TestimonialCard"
+import Footer from "../components/Footer"
 
 export default function Home() {
   return (
-    <div>
+    <>
       <NavBar />
       <Style.Header>
         <h1>Explainer videos made simple</h1>
@@ -222,6 +223,7 @@ export default function Home() {
           <Faq title={question.title} content={question.content} />
         ))}
       </Style.FAQs>
-    </div>
+      <Footer />
+    </>
   )
 }
