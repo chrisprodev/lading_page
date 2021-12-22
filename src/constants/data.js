@@ -103,3 +103,39 @@ export const testimonials = [
     date: "Dec 29, 2021",
   },
 ]
+
+export const pricingTable = [
+  {
+    name: "Trial",
+    level: "Personal Projects",
+    price: "Free",
+    features: [
+      "1 Request",
+      "No Revisions",
+      "2 Day Turnaround",
+      "Cancel Any Time",
+    ],
+  },
+  {
+    name: "Starter",
+    level: "Startups",
+    price: "499",
+    features: [
+      "Unlimited Request",
+      "Unlimited Revisions",
+      "2 Day Turnaround",
+      "Cancel Any Time",
+    ],
+  },
+  {
+    name: "Pro",
+    level: "Marketers and Agencies",
+    price: "899",
+    features: [
+      "Unlimited Request",
+      "Unlimited Revisions",
+      "24hrs Turnaround",
+      "Cancel Any Time",
+    ],
+  },
+]

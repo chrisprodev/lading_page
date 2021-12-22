@@ -3,10 +3,11 @@ import NavBar from "../components/NavBar"
 import * as Style from "./index.Styles"
 import { Link } from "gatsby"
 import Faq from "../components/Faq"
-import { faqs, logosData, testimonials } from "../constants/data"
+import { faqs, logosData, pricingTable, testimonials } from "../constants/data"
 import "../global.css"
 import TestimonialCard from "../components/TestimonialCard"
 import Footer from "../components/Footer"
+import PricingCard from "../components/PricingCard"
 
 export default function Home() {
   return (
@@ -200,6 +201,17 @@ export default function Home() {
           </svg>
         </Style.Feature>
       </Style.Features>
+
+      <Style.Pricing>
+        <h2>Find the plan that is right for you</h2>
+        <p>No hiden fees.</p>
+        <Style.PricingWrapper>
+          {pricingTable.map(card => (
+            <PricingCard {...card} />
+          ))}
+        </Style.PricingWrapper>
+      </Style.Pricing>
+
       <Style.Testimonials>
         <h2>Take your business to the next level</h2>
         <p>

@@ -25,7 +25,7 @@ export const Header = styled.header`
     margin-top: 3.6rem;
 
     a {
-      color: #eff5f8;
+      color: var(--white);
       font-size: 1.6rem;
     }
   }
@@ -115,6 +115,35 @@ export const MiniFeatures = styled.div`
       line-height: 2.8rem;
     }
   }
+`
+
+export const Pricing = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 129rem;
+  margin-top: 23rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  h2,
+  p {
+    margin-top: 2rem;
+  }
+
+  .testimonials__mini-title {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--white);
+  }
+`
+
+export const PricingWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 5rem;
 `
 
 export const Testimonials = styled.section`
