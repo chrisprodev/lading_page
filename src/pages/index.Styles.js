@@ -23,10 +23,15 @@ export const Header = styled.header`
     width: 14rem;
     height: 4.4rem;
     margin-top: 3.6rem;
+    transition: all 150ms ease;
 
     a {
       color: var(--white);
       font-size: 1.6rem;
+    }
+
+    :hover {
+      background: var(--purple-hover);
     }
   }
 

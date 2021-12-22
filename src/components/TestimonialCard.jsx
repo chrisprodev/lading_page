@@ -21,6 +21,7 @@ export default TestimonialCard
 
 const Card = styled.div`
   display: inline-block;
+  user-select: none;
   margin-bottom: 2rem;
   border-radius: 1rem;
   padding: 3rem;

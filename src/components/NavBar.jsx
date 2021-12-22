@@ -70,18 +70,24 @@ const BlockTwo = styled.div`
   align-items: center;
 
   .navbar-container__loginbtn {
+    cursor: pointer;
     width: 12rem;
     height: 4.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 4rem;
-    border: solid 2px var(--purple);
+    outline: solid 2px var(--purple);
     margin-right: 2rem;
+    transition: all 150ms ease;
 
     a {
-      color: #eff5f8;
-      font-size: 1.4rem;
+      color: var(--white);
+      font-size: 1.6rem;
+    }
+
+    :hover {
+      background: var(--purple);
     }
   }
 
@@ -94,10 +100,15 @@ const BlockTwo = styled.div`
     border-radius: 4rem;
     border: none;
     background: var(--purple);
+    transition: all 150ms ease;
 
     a {
-      color: #eff5f8;
-      font-size: 1.4rem;
+      color: var(--white);
+      font-size: 1.6rem;
+    }
+
+    :hover {
+      background: var(--purple-hover);
     }
   }
 `

@@ -37,6 +37,7 @@ const PricingCard = ({ name, level, price, features }) => {
 export default PricingCard
 
 const Container = styled.div`
+  user-select: none;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -44,6 +45,11 @@ const Container = styled.div`
   padding: 3rem;
   background: #262633;
   width: 26rem;
+  transition: all 100ms ease;
+
+  :hover {
+    outline: solid 2px var(--purple);
+  }
 
   span {
     font-size: 1.6rem;
@@ -98,6 +104,11 @@ const Container = styled.div`
     border-radius: 1rem;
     border: none;
     font-size: 1.6rem;
+    transition: all 150ms ease;
+
+    :hover {
+      background: var(--purple-hover);
+    }
   }
 
   small {
