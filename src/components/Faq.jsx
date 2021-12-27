@@ -53,6 +53,9 @@ export default Faq
 
 const Container = styled.div`
   width: 70%;
+  @media only screen and (max-width: 1340px) {
+    width: 80%;
+  }
 `
 
 const Header = styled.div`
@@ -78,5 +81,6 @@ const Header = styled.div`
 `
 
 const Content = styled.p`
+  margin-top: 1.6rem;
   font-size: 1.8rem;
 `

@@ -1,241 +1,500 @@
 import React from "react"
-import NavBar from "../components/NavBar"
-import * as Style from "./index.Styles"
+import styled from "styled-components"
 import { Link } from "gatsby"
-import Faq from "../components/Faq"
 import { faqs, logosData, pricingTable, testimonials } from "../constants/data"
-import "../global.css"
+import NavBar from "../components/NavBar"
+import Faq from "../components/Faq"
 import TestimonialCard from "../components/TestimonialCard"
 import Footer from "../components/Footer"
 import PricingCard from "../components/PricingCard"
+import "../global.css"
 
 export default function Home() {
   return (
     <>
       <NavBar />
-      <Style.Header>
-        <h1>Explainer videos made simple</h1>
-        <p>Scale your business with unlimited video editing.</p>
-        <span className="header__btn">
-          <Link to="/">Get Started</Link>
-        </span>
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          width="848"
-          height="479"
-          viewBox="0 0 848 479"
-        >
-          <defs>
-            <radialGradient
-              id="radial-gradient"
-              cx="0.967"
-              cy="0"
-              r="2.048"
-              gradientTransform="matrix(-0.016, 1, -0.571, -0.009, 0.983, -0.967)"
-              gradientUnits="objectBoundingBox"
-            >
-              <stop offset="0" stop-color="#e43689" />
-              <stop offset="1" stop-color="#9b6bfe" />
-            </radialGradient>
-          </defs>
-          <rect
-            id="Rectangle_2"
-            data-name="Rectangle 2"
-            width="848"
-            height="479"
-            rx="20"
-            fill="url(#radial-gradient)"
-          />
-        </svg>
-      </Style.Header>
-      <Style.Logos>
-        <h5>Used by top designers from the world's top companies</h5>
-        <div className="logos__container">
-          {logosData.map(logo => (
+      <Container>
+        <Header>
+          <h1>Explainer videos made simple</h1>
+          <p>Scale your business with unlimited video editing.</p>
+          <span className="header__btn">
+            <Link to="/">Get Started</Link>
+          </span>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="80%"
+            height="auto"
+            viewBox="0 0 848 479"
+          >
+            <defs>
+              <radialGradient
+                id="radial-gradient"
+                cx="0.967"
+                cy="0"
+                r="2.048"
+                gradientTransform="matrix(-0.016, 1, -0.571, -0.009, 0.983, -0.967)"
+                gradientUnits="objectBoundingBox"
+              >
+                <stop offset="0" stop-color="#e43689" />
+                <stop offset="1" stop-color="#9b6bfe" />
+              </radialGradient>
+            </defs>
+            <rect
+              id="Rectangle_2"
+              data-name="Rectangle 2"
+              width="848"
+              height="479"
+              rx="20"
+              fill="url(#radial-gradient)"
+            />
+          </svg>
+        </Header>
+        <Logos>
+          <h5>Used by top designers from the world's top companies</h5>
+          <div className="logos__container">{logosData.map(logo => logo)}</div>
+        </Logos>
+        <Features>
+          <Feature>
             <svg
               xmlns="http://www.w3.org/2000/svg"
-              width="165"
-              height="57"
-              viewBox="0 0 165 57"
+              width="30%"
+              height="auto"
+              viewBox="0 0 416 765"
             >
+              <defs>
+                <radialGradient
+                  id="radial-gradient"
+                  cx="0"
+                  cy="0"
+                  r="1.217"
+                  gradientTransform="matrix(0.212, 0.977, -2.889, 0.628, 0, 0)"
+                  gradientUnits="objectBoundingBox"
+                >
+                  <stop offset="0" stop-color="#e57a62" />
+                  <stop offset="1" stop-color="#813cc4" />
+                </radialGradient>
+              </defs>
               <rect
-                id="Rectangle_4"
-                width="165"
-                height="57"
-                rx="28.5"
-                fill="#73869a"
+                id="Rectangle_3"
+                width="416"
+                height="765"
+                rx="20"
+                fill="url(#radial-gradient)"
               />
             </svg>
-          ))}
-        </div>
-      </Style.Logos>
-      <Style.Features>
-        <Style.Feature>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="416"
-            height="765"
-            viewBox="0 0 416 765"
-          >
-            <defs>
-              <radialGradient
-                id="radial-gradient"
-                cx="0"
-                cy="0"
-                r="1.217"
-                gradientTransform="matrix(0.212, 0.977, -2.889, 0.628, 0, 0)"
-                gradientUnits="objectBoundingBox"
-              >
-                <stop offset="0" stop-color="#e57a62" />
-                <stop offset="1" stop-color="#813cc4" />
-              </radialGradient>
-            </defs>
-            <rect
-              id="Rectangle_3"
-              width="416"
-              height="765"
-              rx="20"
-              fill="url(#radial-gradient)"
-            />
-          </svg>
-          <div className="feature__main-feature">
-            <h2>The Ultimate Creative Solution</h2>
-            <p>
-              Replace dozens of tools, save money, and manage your entire video
-              business needs from anywhere with one simple platform.
-            </p>
-            <Style.MiniFeatures>
-              <div className="mini-features__description">
-                <h4>Easy to use</h4>
-                <p>
-                  Say goodbye to clunky video software and hello to one-click
-                  editing online. No training needed.
-                </p>
-              </div>
-              <div className="mini-features__description">
-                <h4>Tell your story</h4>
-                <p>Produce material that engages and grows your audiences.</p>
-              </div>
-            </Style.MiniFeatures>
-            <Style.MiniFeatures>
-              <div className="mini-features__description">
-                <h4>Add subtitles</h4>
-                <p>
-                  Say goodbye to clunky video software and hello to one-click
-                  editing online. No training needed.
-                </p>
-              </div>
-              <div className="mini-features__description">
-                <h4>Sound design</h4>
-                <p>Produce material that engages and grows your audiences.</p>
-              </div>
-            </Style.MiniFeatures>
-          </div>
-        </Style.Feature>
-        <Style.Feature>
-          <div className="feature__main-feature feature__main-feature--right">
-            <h2>Market your products</h2>
-            <p>
-              Position your marketing team for rapid growth. Whether you have a
-              video editor on staff who needs support or you are handling the
-              creative on your own.
-            </p>
-            <Style.MiniFeatures>
-              <div className="mini-features__description">
-                <h4>Deliverables in Days</h4>
-                <p>
-                  Designers ensures that you do not miss opportunities by
-                  delivering created by professional video editors.
-                </p>
-              </div>
-              <div className="mini-features__description">
-                <h4>Time Savings</h4>
-                <p>
-                  You can request new videos, ask for revisions through an
-                  intuitive and engaging portal.
-                </p>
-              </div>
-            </Style.MiniFeatures>
-            <Style.MiniFeatures>
-              <div className="mini-features__description">
-                <h4>Cost Efficiency</h4>
-                <p>
-                  Say goodbye to clunky video software and hello to one-click
-                  editing online. No training needed.
-                </p>
-              </div>
-              <div className="mini-features__description">
-                <h4>Unmatched Skills</h4>
-                <p>
-                  Our team has video editors with over 10 years of experience.
-                </p>
-              </div>
-            </Style.MiniFeatures>
-          </div>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="416"
-            height="765"
-            viewBox="0 0 416 765"
-          >
-            <defs>
-              <radialGradient
-                id="radial-gradient"
-                cx="0"
-                cy="0"
-                r="1.217"
-                gradientTransform="matrix(0.212, 0.977, -2.889, 0.628, 0, 0)"
-                gradientUnits="objectBoundingBox"
-              >
-                <stop offset="0" stop-color="#7D47E2" />
-                <stop offset="1" stop-color="#447F8C" />
-              </radialGradient>
-            </defs>
-            <rect
-              id="Rectangle_3"
-              width="416"
-              height="765"
-              rx="20"
-              fill="url(#radial-gradient)"
-            />
-          </svg>
-        </Style.Feature>
-      </Style.Features>
+            <div className="feature__main-feature">
+              <h2>The Ultimate Creative Solution</h2>
+              <p>
+                Replace dozens of tools, save money, and manage your entire
+                video business needs from anywhere with one simple platform.
+              </p>
+              <MiniFeatures>
+                <div className="mini-features__description">
+                  <h4>Easy to use</h4>
+                  <p>
+                    Say goodbye to clunky video software and hello to one-click
+                    editing online. No training needed.
+                  </p>
+                </div>
+                <div className="mini-features__description">
+                  <h4>Tell your story</h4>
+                  <p>Produce material that engages and grows your audiences.</p>
+                </div>
+              </MiniFeatures>
+              <MiniFeatures>
+                <div className="mini-features__description">
+                  <h4>Add subtitles</h4>
+                  <p>
+                    Say goodbye to clunky video software and hello to one-click
+                    editing online. No training needed.
+                  </p>
+                </div>
+                <div className="mini-features__description">
+                  <h4>Sound design</h4>
+                  <p>Produce material that engages and grows your audiences.</p>
+                </div>
+              </MiniFeatures>
+            </div>
+          </Feature>
+          <Feature>
+            <div className="feature__main-feature feature__main-feature--right">
+              <h2>Market your products</h2>
+              <p>
+                Position your marketing team for rapid growth. Whether you have
+                a video editor on staff who needs support or you are handling
+                the creative on your own.
+              </p>
+              <MiniFeatures>
+                <div className="mini-features__description">
+                  <h4>Deliverables in Days</h4>
+                  <p>
+                    Designers ensures that you do not miss opportunities by
+                    delivering created by professional video editors.
+                  </p>
+                </div>
+                <div className="mini-features__description">
+                  <h4>Time Savings</h4>
+                  <p>
+                    You can request new videos, ask for revisions through an
+                    intuitive and engaging portal.
+                  </p>
+                </div>
+              </MiniFeatures>
+              <MiniFeatures>
+                <div className="mini-features__description">
+                  <h4>Cost Efficiency</h4>
+                  <p>
+                    Say goodbye to clunky video software and hello to one-click
+                    editing online. No training needed.
+                  </p>
+                </div>
+                <div className="mini-features__description">
+                  <h4>Unmatched Skills</h4>
+                  <p>
+                    Our team has video editors with over 10 years of experience.
+                  </p>
+                </div>
+              </MiniFeatures>
+            </div>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              width="30%"
+              height="auto"
+              viewBox="0 0 416 765"
+            >
+              <defs>
+                <radialGradient
+                  id="radial-gradient"
+                  cx="0"
+                  cy="0"
+                  r="1.217"
+                  gradientTransform="matrix(0.212, 0.977, -2.889, 0.628, 0, 0)"
+                  gradientUnits="objectBoundingBox"
+                >
+                  <stop offset="0" stop-color="#7D47E2" />
+                  <stop offset="1" stop-color="#447F8C" />
+                </radialGradient>
+              </defs>
+              <rect
+                id="Rectangle_3"
+                width="416"
+                height="765"
+                rx="20"
+                fill="url(#radial-gradient)"
+              />
+            </svg>
+          </Feature>
+        </Features>
 
-      <Style.Pricing>
-        <h2>Find the plan that is right for you</h2>
-        <p>No hiden fees.</p>
-        <Style.PricingWrapper>
-          {pricingTable.map(card => (
-            <PricingCard {...card} />
-          ))}
-        </Style.PricingWrapper>
-      </Style.Pricing>
+        <Pricing>
+          <h2>Find the plan that is right for you</h2>
+          <p>No hiden fees.</p>
+          <PricingWrapper>
+            {pricingTable.map(card => (
+              <PricingCard {...card} />
+            ))}
+          </PricingWrapper>
+        </Pricing>
 
-      <Style.Testimonials>
-        <h2>Take your business to the next level</h2>
-        <p>
-          Become part of a growing community of innovative Entrepreneurs,
-          Marketers and Agencies.
-        </p>
-        <Style.TestimonialsGrid>
-          {testimonials.map(element => (
-            <TestimonialCard
-              user={element.user}
-              account={element.account}
-              body={element.description}
-              date={element.date}
-            />
+        <Testimonials>
+          <h2>Take your business to the next level</h2>
+          <p>
+            Become part of a growing community of innovative Entrepreneurs,
+            Marketers and Agencies.
+          </p>
+          <TestimonialsGrid>
+            {testimonials.map(element => (
+              <TestimonialCard
+                user={element.user}
+                account={element.account}
+                body={element.description}
+                date={element.date}
+              />
+            ))}
+          </TestimonialsGrid>
+        </Testimonials>
+        <FAQs>
+          <h2>Frequently asked questions</h2>
+          {faqs.map(question => (
+            <Faq title={question.title} content={question.content} />
           ))}
-        </Style.TestimonialsGrid>
-      </Style.Testimonials>
-      <Style.FAQs>
-        <h2>Frequently asked questions</h2>
-        {faqs.map(question => (
-          <Faq title={question.title} content={question.content} />
-        ))}
-      </Style.FAQs>
+        </FAQs>
+      </Container>
       <Footer />
     </>
   )
 }
+
+const Container = styled.main`
+  @media only screen and (max-width: 1340px) {
+    padding: 0 2rem;
+  }
+`
+
+const Header = styled.header`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 129rem;
+  margin-top: 19.2rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  p {
+    margin-top: 2rem;
+    @media only screen and (max-width: 1340px) {
+      margin-top: 1.6rem;
+    }
+  }
+
+  .header__btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4rem;
+    background: var(--purple);
+    width: 14rem;
+    height: 4.4rem;
+    margin-top: 3.6rem;
+    transition: all 150ms ease;
+
+    a {
+      color: var(--white);
+      font-size: 1.6rem;
+    }
+
+    :hover {
+      background: var(--purple-hover);
+    }
+  }
+
+  svg {
+    margin-top: 4.8rem;
+    @media only screen and (max-width: 1340px) {
+      margin-top: 2.8rem;
+    }
+  }
+`
+
+const Logos = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 129rem;
+  margin-top: 10rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  h5 {
+    font-size: 1.6rem;
+    color: var(--gray);
+  }
+
+  .logos__container {
+    margin-top: 2rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+
+    svg {
+      height: 3.6rem;
+      width: auto;
+      color: var(--gray);
+      opacity: 0.5;
+      margin: 3rem 3rem 0 3rem;
+    }
+  }
+
+  @media only screen and (max-width: 1340px) {
+    margin-top: 5rem;
+
+    .logos__container {
+      justify-content: center;
+
+      svg {
+        height: 2.4rem;
+        width: auto;
+        margin: 1rem 1rem 0 1rem;
+      }
+    }
+  }
+`
+const Features = styled.section`
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 100%;
+  max-width: 129rem;
+  margin-top: 3rem;
+  margin-left: auto;
+  margin-right: auto;
+`
+const Feature = styled.div`
+  margin-top: 22rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  @media only screen and (max-width: 1340px) {
+    margin-top: 7rem;
+    flex-direction: column;
+  }
+
+  svg {
+    flex-shrink: 0;
+    @media only screen and (max-width: 1340px) {
+      order: -1;
+      width: 60%;
+    }
+  }
+
+  .feature__main-feature {
+    margin-left: 12.4rem;
+
+    @media only screen and (max-width: 1340px) {
+      margin-left: 0;
+      margin-top: 4rem;
+      p {
+        margin-bottom: 2.4rem;
+      }
+    }
+
+    h2,
+    p {
+      margin-top: 2rem;
+      @media only screen and (max-width: 1340px) {
+        margin-top: 1.6rem;
+      }
+    }
+
+    .main-feature__mini-title {
+      font-weight: 500;
+      font-size: 1.6rem;
+      color: var(--white);
+    }
+  }
+
+  .feature__main-feature--right {
+    margin-left: 0;
+    margin-right: 12.4rem;
+
+    @media only screen and (max-width: 1340px) {
+      margin-right: 0;
+    }
+  }
+`
+
+const MiniFeatures = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin-top: 9rem;
+
+  .mini-features__description {
+    max-width: 29rem;
+    p {
+      font-size: 1.6rem;
+      margin-top: 2.4rem;
+      line-height: 2.8rem;
+    }
+    @media only screen and (max-width: 1340px) {
+      max-width: unset;
+      p {
+        margin-top: 1.6rem;
+        margin-bottom: 2.8rem;
+      }
+    }
+  }
+
+  @media only screen and (max-width: 1340px) {
+    flex-direction: column;
+    margin-top: 0;
+  }
+`
+
+const Pricing = styled.section`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  max-width: 129rem;
+  margin-top: 23rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  h2,
+  p {
+    margin-top: 2rem;
+    @media only screen and (max-width: 1340px) {
+      margin-top: 1.6rem;
+    }
+  }
+
+  @media only screen and (max-width: 1340px) {
+    margin-top: 7rem;
+  }
+`
+
+const PricingWrapper = styled.div`
+  display: flex;
+  justify-content: space-between;
+  gap: 2rem;
+  margin-top: 5rem;
+
+  @media only screen and (max-width: 1340px) {
+    flex-direction: column;
+    width: 80%;
+  }
+`
+
+const Testimonials = styled.section`
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 129rem;
+  margin-top: 23rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  h2,
+  p {
+    margin-top: 2rem;
+  }
+
+  .testimonials__mini-title {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--white);
+  }
+
+  @media only screen and (max-width: 1340px) {
+    margin-top: 7rem;
+  }
+`
+const TestimonialsGrid = styled.div`
+  margin-top: 5rem;
+  columns: 3 auto;
+  column-gap: 2rem;
+
+  @media only screen and (max-width: 1340px) {
+    columns: 2 auto;
+    column-gap: 2rem;
+  }
+`
+
+const FAQs = styled.section`
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  max-width: 129rem;
+  margin-top: 23rem;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media only screen and (max-width: 1340px) {
+    margin-top: 7rem;
+  }
+`

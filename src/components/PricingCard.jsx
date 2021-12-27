@@ -116,4 +116,8 @@ const Container = styled.div`
     margin-top: 1rem;
     font-size: 1.4rem;
   }
+
+  @media only screen and (max-width: 1340px) {
+    width: auto;
+  }
 `

@@ -10,7 +10,7 @@ const Footer = () => {
       <Container>
         <img
           className="footer-container__logo"
-          src={"/static/logo.svg"}
+          src={"/logo.svg"}
           alt="vidbox logo"
           width={140}
           height={36}
@@ -37,6 +37,12 @@ const Wrapper = styled.footer`
   height: 8rem;
   display: flex;
   align-items: center;
+
+  @media only screen and (max-width: 1340px) {
+    margin-top: 10rem;
+    height: auto;
+    padding: 3rem 0;
+  }
 `
 
 const Container = styled.div`
@@ -49,8 +55,11 @@ const Container = styled.div`
   margin-right: auto;
 
   .footer-container__logo {
-    opacity: 0.7;
     transform: scale(0.9);
+  }
+
+  @media only screen and (max-width: 1340px) {
+    flex-direction: column;
   }
 `
 
@@ -67,11 +76,19 @@ const Links = styled.div`
       color: var(--white);
     }
   }
+
+  @media only screen and (max-width: 1340px) {
+    margin-top: 2rem;
+  }
 `
 
 const SocialMedia = styled.div`
   display: flex;
   svg {
     margin-left: 1rem;
+  }
+
+  @media only screen and (max-width: 1340px) {
+    margin-top: 2rem;
   }
 `

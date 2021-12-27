@@ -9,7 +9,7 @@ const NavBar = () => {
         <BlockOne>
           <img
             className="navbar-container__logo"
-            src={"/static/logo.svg"}
+            src={"/logo.svg"}
             alt="vidbox logo"
             width={140}
             height={36}
@@ -28,6 +28,11 @@ const NavBar = () => {
             <Link to="/">Request a Demo</Link>
           </span>
         </BlockTwo>
+        <Hamburguer>
+          <span />
+          <span />
+          <span />
+        </Hamburguer>
       </Container>
     </MainContainer>
   )
@@ -42,6 +47,7 @@ const MainContainer = styled.nav`
   right: 0;
   z-index: 999;
   background: #16161e;
+  padding: 0rem 2rem;
 `
 
 const Container = styled.div`
@@ -111,6 +117,10 @@ const BlockTwo = styled.div`
       background: var(--purple-hover);
     }
   }
+
+  @media only screen and (max-width: 1340px) {
+    display: none;
+  }
 `
 
 const Menu = styled.div`
@@ -122,5 +132,28 @@ const Menu = styled.div`
     :hover {
       color: var(--white);
     }
+  }
+
+  @media only screen and (max-width: 1340px) {
+    display: none;
+  }
+`
+
+const Hamburguer = styled.div`
+  display: none;
+  height: 4.4rem;
+
+  @media only screen and (max-width: 1340px) {
+    display: flex;
+    flex-direction: column;
+  }
+
+  span {
+    margin-top: 0.4rem;
+    margin-bottom: 0.4rem;
+    width: 4.4rem;
+    height: 0.3rem;
+    background: var(--white);
+    border-radius: 0.3rem;
   }
 `
