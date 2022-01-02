@@ -31,7 +31,6 @@ const NavBar = () => {
         <Hamburguer>
           <span />
           <span />
-          <span />
         </Hamburguer>
       </Container>
     </MainContainer>
@@ -77,7 +76,7 @@ const BlockTwo = styled.div`
 
   .navbar-container__loginbtn {
     cursor: pointer;
-    width: 12rem;
+    width: 10rem;
     height: 4.4rem;
     display: flex;
     justify-content: center;
@@ -98,7 +97,7 @@ const BlockTwo = styled.div`
   }
 
   .navbar-container__demobtn {
-    width: 16rem;
+    width: 20rem;
     height: 4.4rem;
     display: flex;
     justify-content: center;
@@ -146,13 +145,14 @@ const Hamburguer = styled.div`
   @media only screen and (max-width: 1340px) {
     display: flex;
     flex-direction: column;
+    justify-content: center;
   }
 
   span {
-    margin-top: 0.4rem;
-    margin-bottom: 0.4rem;
-    width: 4.4rem;
-    height: 0.3rem;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    width: 2.8rem;
+    height: 0.2rem;
     background: var(--white);
     border-radius: 0.3rem;
   }

@@ -5,7 +5,7 @@ const Faq = ({ title, content }) => {
   const [open, setOpen] = useState(false)
 
   return (
-    <Container>
+    <Container open={open}>
       <Header onClick={() => setOpen(!open)} open={open}>
         <p>{title}</p>
         <svg
@@ -52,17 +52,35 @@ const Faq = ({ title, content }) => {
 export default Faq
 
 const Container = styled.div`
+  user-select: none;
   width: 70%;
+  margin-top: 3rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: background 50ms ease;
+  background: ${props => (props.open ? "#262633" : "none")};
+
+  :hover {
+    background: #262633;
+  }
+
   @media only screen and (max-width: 1340px) {
-    width: 80%;
+    width: 90%;
+    margin-top: 5rem;
+    padding: 0;
+    border-radius: 0;
+    background: unset;
+    :hover {
+      background: unset;
+    }
   }
 `
 
 const Header = styled.div`
   display: flex;
   justify-content: space-between;
+  align-items: center;
   cursor: pointer;
-  margin-top: 5rem;
 
   p {
     font-size: 2rem;
@@ -78,9 +96,16 @@ const Header = styled.div`
       stroke: ${props => (props.open ? "var(--white)" : "var(--gray)")};
     }
   }
+
+  @media only screen and (max-width: 1340px) {
+    p {
+      max-width: 80%;
+    }
+  }
 `
 
 const Content = styled.p`
   margin-top: 1.6rem;
   font-size: 1.8rem;
+  color: var(--gray-2);
 `

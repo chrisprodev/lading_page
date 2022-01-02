@@ -65,8 +65,8 @@ const Container = styled.div`
   }
 
   .pricing__tag {
-    color: var(--white);
-    margin-top: 4rem;
+    color: var(--gray-2);
+    margin-top: 2rem;
   }
 
   h5 {
@@ -98,7 +98,7 @@ const Container = styled.div`
   button {
     cursor: pointer;
     width: 100%;
-    height: 4.4rem;
+    height: 4.8rem;
     background: var(--purple);
     color: var(--white);
     border-radius: 1rem;

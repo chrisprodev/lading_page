@@ -84,7 +84,7 @@ export default function Home() {
             </svg>
             <div className="feature__main-feature">
               <h2>The Ultimate Creative Solution</h2>
-              <p>
+              <p className="main-feature__description">
                 Replace dozens of tools, save money, and manage your entire
                 video business needs from anywhere with one simple platform.
               </p>
@@ -119,7 +119,7 @@ export default function Home() {
           <Feature>
             <div className="feature__main-feature feature__main-feature--right">
               <h2>Market your products</h2>
-              <p>
+              <p className="main-feature__description">
                 Position your marketing team for rapid growth. Whether you have
                 a video editor on staff who needs support or you are handling
                 the creative on your own.
@@ -198,7 +198,7 @@ export default function Home() {
 
         <Testimonials>
           <h2>Take your business to the next level</h2>
-          <p>
+          <p className="testimonials__sub-title">
             Become part of a growing community of innovative Entrepreneurs,
             Marketers and Agencies.
           </p>
@@ -227,7 +227,7 @@ export default function Home() {
 
 const Container = styled.main`
   @media only screen and (max-width: 1340px) {
-    padding: 0 2rem;
+    padding: 0 3rem;
   }
 `
 
@@ -237,15 +237,18 @@ const Header = styled.header`
   align-items: center;
   width: 100%;
   max-width: 129rem;
-  margin-top: 19.2rem;
+  margin-top: 16rem;
   margin-left: auto;
   margin-right: auto;
 
   p {
     margin-top: 2rem;
-    @media only screen and (max-width: 1340px) {
-      margin-top: 1.6rem;
-    }
+    text-align: center;
+  }
+
+  h1 {
+    max-width: 64rem;
+    text-align: center;
   }
 
   .header__btn {
@@ -254,8 +257,8 @@ const Header = styled.header`
     align-items: center;
     border-radius: 4rem;
     background: var(--purple);
-    width: 14rem;
-    height: 4.4rem;
+    width: 16rem;
+    height: 4.8rem;
     margin-top: 3.6rem;
     transition: all 150ms ease;
 
@@ -271,8 +274,14 @@ const Header = styled.header`
 
   svg {
     margin-top: 4.8rem;
-    @media only screen and (max-width: 1340px) {
+  }
+
+  @media only screen and (max-width: 1340px) {
+    svg {
       margin-top: 2.8rem;
+    }
+    p {
+      margin-top: 1.4rem;
     }
   }
 `
@@ -288,13 +297,13 @@ const Logos = styled.section`
   margin-right: auto;
 
   h5 {
-    font-size: 1.6rem;
+    font-size: 1.8rem;
     color: var(--gray);
   }
 
   .logos__container {
-    margin-top: 2rem;
-    width: 100%;
+    margin-top: 4rem;
+    width: 60%;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
@@ -311,8 +320,13 @@ const Logos = styled.section`
   @media only screen and (max-width: 1340px) {
     margin-top: 5rem;
 
+    h5 {
+      font-size: 1.2rem;
+    }
+
     .logos__container {
       justify-content: center;
+      width: 100%;
 
       svg {
         height: 2.4rem;
@@ -338,50 +352,52 @@ const Feature = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media only screen and (max-width: 1340px) {
-    margin-top: 7rem;
-    flex-direction: column;
-  }
-
   svg {
     flex-shrink: 0;
-    @media only screen and (max-width: 1340px) {
-      order: -1;
-      width: 60%;
-    }
   }
 
   .feature__main-feature {
     margin-left: 12.4rem;
 
-    @media only screen and (max-width: 1340px) {
-      margin-left: 0;
-      margin-top: 4rem;
-      p {
-        margin-bottom: 2.4rem;
-      }
-    }
-
     h2,
     p {
       margin-top: 2rem;
-      @media only screen and (max-width: 1340px) {
-        margin-top: 1.6rem;
-      }
-    }
-
-    .main-feature__mini-title {
-      font-weight: 500;
-      font-size: 1.6rem;
-      color: var(--white);
     }
   }
 
   .feature__main-feature--right {
     margin-left: 0;
     margin-right: 12.4rem;
+  }
 
-    @media only screen and (max-width: 1340px) {
+  @media only screen and (max-width: 1340px) {
+    margin-top: 7rem;
+    flex-direction: column;
+    text-align: center;
+
+    svg {
+      order: -1;
+      width: 60%;
+    }
+
+    h2,
+    p {
+      margin-top: 1.6rem;
+    }
+
+    .feature__main-feature {
+      margin-left: 0;
+      margin-top: 4rem;
+      p {
+        margin-bottom: 2.4rem;
+      }
+
+      .main-feature__description {
+        margin-bottom: 5rem;
+      }
+    }
+
+    .feature__main-feature--right {
       margin-right: 0;
     }
   }
@@ -395,22 +411,23 @@ const MiniFeatures = styled.div`
   .mini-features__description {
     max-width: 29rem;
     p {
-      font-size: 1.6rem;
+      font-size: 1.8rem;
       margin-top: 2.4rem;
-      line-height: 2.8rem;
-    }
-    @media only screen and (max-width: 1340px) {
-      max-width: unset;
-      p {
-        margin-top: 1.6rem;
-        margin-bottom: 2.8rem;
-      }
+      line-height: 3rem;
     }
   }
 
   @media only screen and (max-width: 1340px) {
     flex-direction: column;
     margin-top: 0;
+
+    .mini-features__description {
+      max-width: unset;
+      p {
+        margin-top: 1.6rem;
+        margin-bottom: 5rem;
+      }
+    }
   }
 `
 
@@ -427,13 +444,19 @@ const Pricing = styled.section`
   h2,
   p {
     margin-top: 2rem;
-    @media only screen and (max-width: 1340px) {
-      margin-top: 1.6rem;
-    }
   }
 
   @media only screen and (max-width: 1340px) {
     margin-top: 7rem;
+
+    h2,
+    p {
+      margin-top: 1.6rem;
+    }
+
+    h2 {
+      text-align: center;
+    }
   }
 `
 
@@ -445,7 +468,7 @@ const PricingWrapper = styled.div`
 
   @media only screen and (max-width: 1340px) {
     flex-direction: column;
-    width: 80%;
+    width: 90%;
   }
 `
 
@@ -461,6 +484,11 @@ const Testimonials = styled.section`
   h2,
   p {
     margin-top: 2rem;
+  }
+
+  h2,
+  .testimonials__sub-title {
+    text-align: center;
   }
 
   .testimonials__mini-title {
@@ -479,8 +507,12 @@ const TestimonialsGrid = styled.div`
   column-gap: 2rem;
 
   @media only screen and (max-width: 1340px) {
-    columns: 2 auto;
+    columns: 1 auto;
     column-gap: 2rem;
+
+    div:nth-of-type(1n + 4) {
+      display: none;
+    }
   }
 `
 
@@ -496,5 +528,9 @@ const FAQs = styled.section`
 
   @media only screen and (max-width: 1340px) {
     margin-top: 7rem;
+
+    h2 {
+      text-align: center;
+    }
   }
 `
