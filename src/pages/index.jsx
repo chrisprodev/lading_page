@@ -1,226 +1,242 @@
-import React from "react"
+import React, { useState } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
 import { faqs, logosData, pricingTable, testimonials } from "../constants/data"
-import NavBar from "../components/NavBar"
-import Faq from "../components/Faq"
 import TestimonialCard from "../components/TestimonialCard"
-import Footer from "../components/Footer"
 import PricingCard from "../components/PricingCard"
+import MobileMenu from "../components/MobileMenu"
+import NavBar from "../components/NavBar"
+import Footer from "../components/Footer"
+import Faq from "../components/Faq"
 import "../global.css"
 
 export default function Home() {
+  const [menu, showMenu] = useState(false)
+
   return (
     <>
-      <NavBar />
-      <Container>
-        <Header>
-          <h1>Explainer videos made simple</h1>
-          <p>Scale your business with unlimited video editing.</p>
-          <span className="header__btn">
-            <Link to="/">Get Started</Link>
-          </span>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="80%"
-            height="auto"
-            viewBox="0 0 848 479"
-          >
-            <defs>
-              <radialGradient
-                id="radial-gradient"
-                cx="0.967"
-                cy="0"
-                r="2.048"
-                gradientTransform="matrix(-0.016, 1, -0.571, -0.009, 0.983, -0.967)"
-                gradientUnits="objectBoundingBox"
+      <NavBar onOpenMobileMenu={() => showMenu(!menu)} menu={menu} />
+      {menu ? (
+        <MobileMenu />
+      ) : (
+        <>
+          <Container>
+            <Header>
+              <h1>Explainer videos made simple</h1>
+              <p>Scale your business with unlimited video editing.</p>
+              <span className="header__btn">
+                <Link to="/">Get Started</Link>
+              </span>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="80%"
+                height="auto"
+                viewBox="0 0 848 479"
               >
-                <stop offset="0" stop-color="#e43689" />
-                <stop offset="1" stop-color="#9b6bfe" />
-              </radialGradient>
-            </defs>
-            <rect
-              id="Rectangle_2"
-              data-name="Rectangle 2"
-              width="848"
-              height="479"
-              rx="20"
-              fill="url(#radial-gradient)"
-            />
-          </svg>
-        </Header>
-        <Logos>
-          <h5>Used by top designers from the world's top companies</h5>
-          <div className="logos__container">{logosData.map(logo => logo)}</div>
-        </Logos>
-        <Features>
-          <Feature>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30%"
-              height="auto"
-              viewBox="0 0 416 765"
-            >
-              <defs>
-                <radialGradient
-                  id="radial-gradient"
-                  cx="0"
-                  cy="0"
-                  r="1.217"
-                  gradientTransform="matrix(0.212, 0.977, -2.889, 0.628, 0, 0)"
-                  gradientUnits="objectBoundingBox"
+                <defs>
+                  <radialGradient
+                    id="radial-gradient"
+                    cx="0.967"
+                    cy="0"
+                    r="2.048"
+                    gradientTransform="matrix(-0.016, 1, -0.571, -0.009, 0.983, -0.967)"
+                    gradientUnits="objectBoundingBox"
+                  >
+                    <stop offset="0" stop-color="#e43689" />
+                    <stop offset="1" stop-color="#9b6bfe" />
+                  </radialGradient>
+                </defs>
+                <rect
+                  id="Rectangle_2"
+                  data-name="Rectangle 2"
+                  width="848"
+                  height="479"
+                  rx="20"
+                  fill="url(#radial-gradient)"
+                />
+              </svg>
+            </Header>
+            <Logos>
+              <h5>Used by top designers from the world's top companies</h5>
+              <div className="logos__container">
+                {logosData.map(logo => logo)}
+              </div>
+            </Logos>
+            <Features>
+              <Feature>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30%"
+                  height="auto"
+                  viewBox="0 0 416 765"
                 >
-                  <stop offset="0" stop-color="#e57a62" />
-                  <stop offset="1" stop-color="#813cc4" />
-                </radialGradient>
-              </defs>
-              <rect
-                id="Rectangle_3"
-                width="416"
-                height="765"
-                rx="20"
-                fill="url(#radial-gradient)"
-              />
-            </svg>
-            <div className="feature__main-feature">
-              <h2>The Ultimate Creative Solution</h2>
-              <p className="main-feature__description">
-                Replace dozens of tools, save money, and manage your entire
-                video business needs from anywhere with one simple platform.
-              </p>
-              <MiniFeatures>
-                <div className="mini-features__description">
-                  <h4>Easy to use</h4>
-                  <p>
-                    Say goodbye to clunky video software and hello to one-click
-                    editing online. No training needed.
+                  <defs>
+                    <radialGradient
+                      id="radial-gradient"
+                      cx="0"
+                      cy="0"
+                      r="1.217"
+                      gradientTransform="matrix(0.212, 0.977, -2.889, 0.628, 0, 0)"
+                      gradientUnits="objectBoundingBox"
+                    >
+                      <stop offset="0" stop-color="#e57a62" />
+                      <stop offset="1" stop-color="#813cc4" />
+                    </radialGradient>
+                  </defs>
+                  <rect
+                    id="Rectangle_3"
+                    width="416"
+                    height="765"
+                    rx="20"
+                    fill="url(#radial-gradient)"
+                  />
+                </svg>
+                <div className="feature__main-feature">
+                  <h2>The Ultimate Creative Solution</h2>
+                  <p className="main-feature__description">
+                    Replace dozens of tools, save money, and manage your entire
+                    video business needs from anywhere with one simple platform.
                   </p>
+                  <MiniFeatures>
+                    <div className="mini-features__description">
+                      <h4>Easy to use</h4>
+                      <p>
+                        Say goodbye to clunky video software and hello to
+                        one-click editing online. No training needed.
+                      </p>
+                    </div>
+                    <div className="mini-features__description">
+                      <h4>Tell your story</h4>
+                      <p>
+                        Produce material that engages and grows your audiences.
+                      </p>
+                    </div>
+                  </MiniFeatures>
+                  <MiniFeatures>
+                    <div className="mini-features__description">
+                      <h4>Add subtitles</h4>
+                      <p>
+                        Say goodbye to clunky video software and hello to
+                        one-click editing online. No training needed.
+                      </p>
+                    </div>
+                    <div className="mini-features__description">
+                      <h4>Sound design</h4>
+                      <p>
+                        Produce material that engages and grows your audiences.
+                      </p>
+                    </div>
+                  </MiniFeatures>
                 </div>
-                <div className="mini-features__description">
-                  <h4>Tell your story</h4>
-                  <p>Produce material that engages and grows your audiences.</p>
-                </div>
-              </MiniFeatures>
-              <MiniFeatures>
-                <div className="mini-features__description">
-                  <h4>Add subtitles</h4>
-                  <p>
-                    Say goodbye to clunky video software and hello to one-click
-                    editing online. No training needed.
+              </Feature>
+              <Feature>
+                <div className="feature__main-feature feature__main-feature--right">
+                  <h2>Market your products</h2>
+                  <p className="main-feature__description">
+                    Position your marketing team for rapid growth. Whether you
+                    have a video editor on staff who needs support or you are
+                    handling the creative on your own.
                   </p>
+                  <MiniFeatures>
+                    <div className="mini-features__description">
+                      <h4>Deliverables in Days</h4>
+                      <p>
+                        Designers ensures that you do not miss opportunities by
+                        delivering created by professional video editors.
+                      </p>
+                    </div>
+                    <div className="mini-features__description">
+                      <h4>Time Savings</h4>
+                      <p>
+                        You can request new videos, ask for revisions through an
+                        intuitive and engaging portal.
+                      </p>
+                    </div>
+                  </MiniFeatures>
+                  <MiniFeatures>
+                    <div className="mini-features__description">
+                      <h4>Cost Efficiency</h4>
+                      <p>
+                        Say goodbye to clunky video software and hello to
+                        one-click editing online. No training needed.
+                      </p>
+                    </div>
+                    <div className="mini-features__description">
+                      <h4>Unmatched Skills</h4>
+                      <p>
+                        Our team has video editors with over 10 years of
+                        experience.
+                      </p>
+                    </div>
+                  </MiniFeatures>
                 </div>
-                <div className="mini-features__description">
-                  <h4>Sound design</h4>
-                  <p>Produce material that engages and grows your audiences.</p>
-                </div>
-              </MiniFeatures>
-            </div>
-          </Feature>
-          <Feature>
-            <div className="feature__main-feature feature__main-feature--right">
-              <h2>Market your products</h2>
-              <p className="main-feature__description">
-                Position your marketing team for rapid growth. Whether you have
-                a video editor on staff who needs support or you are handling
-                the creative on your own.
-              </p>
-              <MiniFeatures>
-                <div className="mini-features__description">
-                  <h4>Deliverables in Days</h4>
-                  <p>
-                    Designers ensures that you do not miss opportunities by
-                    delivering created by professional video editors.
-                  </p>
-                </div>
-                <div className="mini-features__description">
-                  <h4>Time Savings</h4>
-                  <p>
-                    You can request new videos, ask for revisions through an
-                    intuitive and engaging portal.
-                  </p>
-                </div>
-              </MiniFeatures>
-              <MiniFeatures>
-                <div className="mini-features__description">
-                  <h4>Cost Efficiency</h4>
-                  <p>
-                    Say goodbye to clunky video software and hello to one-click
-                    editing online. No training needed.
-                  </p>
-                </div>
-                <div className="mini-features__description">
-                  <h4>Unmatched Skills</h4>
-                  <p>
-                    Our team has video editors with over 10 years of experience.
-                  </p>
-                </div>
-              </MiniFeatures>
-            </div>
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="30%"
-              height="auto"
-              viewBox="0 0 416 765"
-            >
-              <defs>
-                <radialGradient
-                  id="radial-gradient"
-                  cx="0"
-                  cy="0"
-                  r="1.217"
-                  gradientTransform="matrix(0.212, 0.977, -2.889, 0.628, 0, 0)"
-                  gradientUnits="objectBoundingBox"
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30%"
+                  height="auto"
+                  viewBox="0 0 416 765"
                 >
-                  <stop offset="0" stop-color="#7D47E2" />
-                  <stop offset="1" stop-color="#447F8C" />
-                </radialGradient>
-              </defs>
-              <rect
-                id="Rectangle_3"
-                width="416"
-                height="765"
-                rx="20"
-                fill="url(#radial-gradient)"
-              />
-            </svg>
-          </Feature>
-        </Features>
+                  <defs>
+                    <radialGradient
+                      id="radial-gradient"
+                      cx="0"
+                      cy="0"
+                      r="1.217"
+                      gradientTransform="matrix(0.212, 0.977, -2.889, 0.628, 0, 0)"
+                      gradientUnits="objectBoundingBox"
+                    >
+                      <stop offset="0" stop-color="#7D47E2" />
+                      <stop offset="1" stop-color="#447F8C" />
+                    </radialGradient>
+                  </defs>
+                  <rect
+                    id="Rectangle_3"
+                    width="416"
+                    height="765"
+                    rx="20"
+                    fill="url(#radial-gradient)"
+                  />
+                </svg>
+              </Feature>
+            </Features>
 
-        <Pricing>
-          <h2>Find the plan that is right for you</h2>
-          <p>No hiden fees.</p>
-          <PricingWrapper>
-            {pricingTable.map(card => (
-              <PricingCard {...card} />
-            ))}
-          </PricingWrapper>
-        </Pricing>
+            <Pricing>
+              <h2>Find the plan that is right for you</h2>
+              <p>No hiden fees.</p>
+              <PricingWrapper>
+                {pricingTable.map(card => (
+                  <PricingCard {...card} />
+                ))}
+              </PricingWrapper>
+            </Pricing>
 
-        <Testimonials>
-          <h2>Take your business to the next level</h2>
-          <p className="testimonials__sub-title">
-            Become part of a growing community of innovative Entrepreneurs,
-            Marketers and Agencies.
-          </p>
-          <TestimonialsGrid>
-            {testimonials.map(element => (
-              <TestimonialCard
-                user={element.user}
-                account={element.account}
-                body={element.description}
-                date={element.date}
-              />
-            ))}
-          </TestimonialsGrid>
-        </Testimonials>
-        <FAQs>
-          <h2>Frequently asked questions</h2>
-          {faqs.map(question => (
-            <Faq title={question.title} content={question.content} />
-          ))}
-        </FAQs>
-      </Container>
-      <Footer />
+            <Testimonials>
+              <h2>Take your business to the next level</h2>
+              <p className="testimonials__sub-title">
+                Become part of a growing community of innovative Entrepreneurs,
+                Marketers and Agencies.
+              </p>
+              <TestimonialsGrid>
+                {testimonials.map(element => (
+                  <TestimonialCard
+                    user={element.user}
+                    account={element.account}
+                    body={element.description}
+                    date={element.date}
+                  />
+                ))}
+              </TestimonialsGrid>
+            </Testimonials>
+            <FAQs>
+              <h2>Frequently asked questions</h2>
+              {faqs.map(question => (
+                <Faq title={question.title} content={question.content} />
+              ))}
+            </FAQs>
+          </Container>
+          <Footer />
+        </>
+      )}
     </>
   )
 }
@@ -298,6 +314,8 @@ const Logos = styled.section`
 
   h5 {
     font-size: 1.8rem;
+    text-align: center;
+    line-height: 2rem;
     color: var(--gray);
   }
 

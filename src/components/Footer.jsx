@@ -79,6 +79,13 @@ const Links = styled.div`
 
   @media only screen and (max-width: 1340px) {
     margin-top: 2rem;
+    flex-direction: column;
+
+    a {
+      text-align: center;
+      margin-left: 0;
+      margin-bottom: 2rem;
+    }
   }
 `
 
