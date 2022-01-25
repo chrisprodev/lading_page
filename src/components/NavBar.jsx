@@ -44,7 +44,7 @@ const MainContainer = styled.nav`
   top: 0;
   left: 0;
   right: 0;
-  z-index: 999;
+  z-index: 99;
   background: #0e0e12;
   padding: 0rem 2rem;
 `

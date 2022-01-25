@@ -7,11 +7,13 @@ import PricingCard from "../components/PricingCard"
 import MobileMenu from "../components/MobileMenu"
 import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
+import Modal from "../components/Modal"
 import Faq from "../components/Faq"
 import "../global.css"
 
 export default function Home() {
   const [menu, showMenu] = useState(false)
+  const [modal, showModal] = useState(false)
 
   return (
     <>
@@ -25,7 +27,9 @@ export default function Home() {
               <h1>Explainer videos made simple</h1>
               <p>Scale your business with unlimited video editing.</p>
               <span className="header__btn">
-                <Link to="/">Get Started</Link>
+                <Link to="/" onClick={() => showModal(true)}>
+                  Get Started
+                </Link>
               </span>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -237,6 +241,7 @@ export default function Home() {
           <Footer />
         </>
       )}
+      {modal && <Modal onCloseModal={() => showModal(false)} />}
     </>
   )
 }
