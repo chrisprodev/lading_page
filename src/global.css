@@ -6,6 +6,7 @@
   --white:#eff5f8;
   --gray:#73869a;
   --gray-2:#889cb2;
+  --gray-3:#c4d5e7;
   --green:#45D9BE;
 }
 
@@ -32,7 +33,7 @@ h2,
 h3,
 h4,
 h5 {
-  color: #eff5f8;
+  color: var(--white);
   margin: 0;
 }
 
