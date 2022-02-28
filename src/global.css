@@ -4,11 +4,14 @@
   --purple:#6333ff;
   --purple-hover:#532bd8;
   --white:#eff5f8;
-  --gray:rgba(0, 0, 0, 0.05);
+  --gray:#a5b6c9;
   --gray-2:#889cb2;
   --gray-3:#c4d5e7;
   --green:#45D9BE;
   --blue:#1081FF;
+  --opacity-7:rgba(255, 255, 255, 0.7);
+  --opacity-3:rgba(255, 255, 255, 0.3);
+  --opacity-05:rgba(255, 255, 255, 0.05);
 }
 
 html{

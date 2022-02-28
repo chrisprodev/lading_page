@@ -24,41 +24,43 @@ export default function Home() {
         <>
           <Container>
             <Header>
-              <h1>Explainer videos made simple</h1>
-              <p>Scale your business with unlimited video editing.</p>
-              <span className="header__btn">
-                <Link to="/" onClick={() => showModal(true)}>
-                  Get Started
-                </Link>
-              </span>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                width="80%"
-                height="auto"
-                viewBox="0 0 848 479"
-              >
-                <defs>
-                  <radialGradient
-                    id="radial-gradient"
-                    cx="0.967"
-                    cy="0"
-                    r="2.048"
-                    gradientTransform="matrix(-0.016, 1, -0.571, -0.009, 0.983, -0.967)"
-                    gradientUnits="objectBoundingBox"
-                  >
-                    <stop offset="0" stop-color="#e43689" />
-                    <stop offset="1" stop-color="#9b6bfe" />
-                  </radialGradient>
-                </defs>
-                <rect
-                  id="Rectangle_2"
-                  data-name="Rectangle 2"
-                  width="848"
-                  height="479"
-                  rx="20"
-                  fill="url(#radial-gradient)"
-                />
-              </svg>
+              <ContentWrapper>
+                <h1>Explainer videos made simple</h1>
+                <p>Scale your business with unlimited video editing.</p>
+                <span className="header__btn">
+                  <Link to="/" onClick={() => showModal(true)}>
+                    Get Started
+                  </Link>
+                </span>
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="80%"
+                  height="auto"
+                  viewBox="0 0 848 479"
+                >
+                  <defs>
+                    <radialGradient
+                      id="radial-gradient"
+                      cx="0.967"
+                      cy="0"
+                      r="2.048"
+                      gradientTransform="matrix(-0.016, 1, -0.571, -0.009, 0.983, -0.967)"
+                      gradientUnits="objectBoundingBox"
+                    >
+                      <stop offset="0" stop-color="#fff" />
+                      <stop offset="1" stop-color="#fff" />
+                    </radialGradient>
+                  </defs>
+                  <rect
+                    id="Rectangle_2"
+                    data-name="Rectangle 2"
+                    width="848"
+                    height="479"
+                    rx="20"
+                    fill="url(#radial-gradient)"
+                  />
+                </svg>
+              </ContentWrapper>
             </Header>
             <Logos>
               <h5>Used by top designers from the world's top companies</h5>
@@ -253,16 +255,21 @@ const Container = styled.main`
 `
 
 const Header = styled.header`
+  padding: 16rem 0;
+  background: var(--blue);
+`
+
+const ContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 129rem;
-  margin-top: 16rem;
   margin-left: auto;
   margin-right: auto;
 
   p {
+    color: var(--opacity-7);
     margin-top: 2rem;
     text-align: center;
   }
@@ -273,23 +280,23 @@ const Header = styled.header`
   }
 
   .header__btn {
+    cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 4rem;
-    background: var(--purple);
-    width: 16rem;
+    border-radius: 1rem;
+    background: #fff;
+    width: 14rem;
     height: 4.8rem;
     margin-top: 3.6rem;
     transition: all 150ms ease;
 
     a {
-      color: var(--white);
       font-size: 1.6rem;
     }
 
     :hover {
-      background: var(--purple-hover);
+      background: var(--opacity-7);
     }
   }
 
