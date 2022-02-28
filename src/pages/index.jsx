@@ -68,82 +68,90 @@ export default function Home() {
                 {logosData.map(logo => logo)}
               </div>
             </Logos>
-            <Features>
-              <Feature bg="green">
-                <VideoContainer></VideoContainer>
-                <div className="feature__main-feature">
-                  <h2>The Ultimate Creative Solution</h2>
-                  <p className="main-feature__description">
-                    Replace dozens of tools, save money, and manage your entire
-                    video business needs from anywhere with one simple platform.
-                  </p>
-                </div>
-              </Feature>
-              <MiniFeatures>
-                <div className="mini-features__description">
-                  <h4>Easy to use</h4>
-                  <p>
-                    Say goodbye to clunky video software and hello to one-click
-                    editing online. No training needed.
-                  </p>
-                </div>
-                <div className="mini-features__description">
-                  <h4>Tell your story</h4>
-                  <p>Produce material that engages and grows your audiences.</p>
-                </div>
-                <div className="mini-features__description">
-                  <h4>Add subtitles</h4>
-                  <p>
-                    Say goodbye to clunky video software and hello to one-click
-                    editing online. No training needed.
-                  </p>
-                </div>
-                <div className="mini-features__description">
-                  <h4>Sound design</h4>
-                  <p>Produce material that engages and grows your audiences.</p>
-                </div>
-              </MiniFeatures>
-              <Feature bg="blue">
-                <VideoContainer bg="blue"></VideoContainer>
-                <div className="feature__main-feature">
-                  <h2>Market your products</h2>
-                  <p className="main-feature__description">
-                    Position your marketing team for rapid growth. Whether you
-                    have a video editor on staff who needs support or you are
-                    handling the creative on your own.
-                  </p>
-                </div>
-              </Feature>
-              <MiniFeatures>
-                <div className="mini-features__description">
-                  <h4>Deliverables in Days</h4>
-                  <p>
-                    Designers ensures that you do not miss opportunities by
-                    delivering created by professional video editors.
-                  </p>
-                </div>
-                <div className="mini-features__description">
-                  <h4>Time Savings</h4>
-                  <p>
-                    You can request new videos, ask for revisions through an
-                    intuitive and engaging portal.
-                  </p>
-                </div>
-                <div className="mini-features__description">
-                  <h4>Cost Efficiency</h4>
-                  <p>
-                    Say goodbye to clunky video software and hello to one-click
-                    editing online. No training needed.
-                  </p>
-                </div>
-                <div className="mini-features__description">
-                  <h4>Unmatched Skills</h4>
-                  <p>
-                    Our team has video editors with over 10 years of experience.
-                  </p>
-                </div>
-              </MiniFeatures>
-            </Features>
+            <FeatureWrapper>
+              <Features>
+                <Feature bg="green">
+                  <VideoContainer></VideoContainer>
+                  <div className="feature__main-feature">
+                    <h2>The Ultimate Creative Solution</h2>
+                    <p className="main-feature__description">
+                      Replace dozens of tools, save money, and manage your
+                      entire video business needs from anywhere with one simple
+                      platform.
+                    </p>
+                  </div>
+                </Feature>
+                <MiniFeatures>
+                  <div className="mini-features__description">
+                    <h4>Easy to use</h4>
+                    <p>
+                      Say goodbye to clunky video software and hello to
+                      one-click editing online. No training needed.
+                    </p>
+                  </div>
+                  <div className="mini-features__description">
+                    <h4>Tell your story</h4>
+                    <p>
+                      Produce material that engages and grows your audiences.
+                    </p>
+                  </div>
+                  <div className="mini-features__description">
+                    <h4>Add subtitles</h4>
+                    <p>
+                      Say goodbye to clunky video software and hello to
+                      one-click editing online. No training needed.
+                    </p>
+                  </div>
+                  <div className="mini-features__description">
+                    <h4>Sound design</h4>
+                    <p>
+                      Produce material that engages and grows your audiences.
+                    </p>
+                  </div>
+                </MiniFeatures>
+                <Feature bg="blue">
+                  <VideoContainer bg="blue"></VideoContainer>
+                  <div className="feature__main-feature">
+                    <h2>Market your products</h2>
+                    <p className="main-feature__description">
+                      Position your marketing team for rapid growth. Whether you
+                      have a video editor on staff who needs support or you are
+                      handling the creative on your own.
+                    </p>
+                  </div>
+                </Feature>
+                <MiniFeatures>
+                  <div className="mini-features__description">
+                    <h4>Deliverables in Days</h4>
+                    <p>
+                      Designers ensures that you do not miss opportunities by
+                      delivering created by professional video editors.
+                    </p>
+                  </div>
+                  <div className="mini-features__description">
+                    <h4>Time Savings</h4>
+                    <p>
+                      You can request new videos, ask for revisions through an
+                      intuitive and engaging portal.
+                    </p>
+                  </div>
+                  <div className="mini-features__description">
+                    <h4>Cost Efficiency</h4>
+                    <p>
+                      Say goodbye to clunky video software and hello to
+                      one-click editing online. No training needed.
+                    </p>
+                  </div>
+                  <div className="mini-features__description">
+                    <h4>Unmatched Skills</h4>
+                    <p>
+                      Our team has video editors with over 10 years of
+                      experience.
+                    </p>
+                  </div>
+                </MiniFeatures>
+              </Features>
+            </FeatureWrapper>
             <Pricing>
               <PricingContentWrapper>
                 <h2>Find the plan that is right for you</h2>
@@ -189,15 +197,15 @@ export default function Home() {
   )
 }
 
-const Container = styled.main`
-  @media only screen and (max-width: 1340px) {
-    padding: 0 3rem;
-  }
-`
+const Container = styled.main``
 
 const Header = styled.header`
   padding: 16rem 0;
   background: var(--blue);
+
+  @media only screen and (max-width: 1340px) {
+    padding: 16rem 3rem 8rem 3rem;
+  }
 `
 
 const ContentWrapper = styled.div`
@@ -307,7 +315,14 @@ const Logos = styled.section`
     }
   }
 `
-const Features = styled.section`
+
+const FeatureWrapper = styled.section`
+  @media only screen and (max-width: 1340px) {
+    padding: 16rem 3rem 8rem 3rem;
+  }
+`
+
+const Features = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -320,7 +335,7 @@ const Feature = styled.div`
   display: flex;
   background: ${({ bg }) =>
     bg === "green" ? "var(--orange)" : "var(--blue-2)"};
-  border-radius: 1rem;
+  border-radius: 2rem;
 
   .feature__main-feature {
     display: flex;
@@ -340,6 +355,7 @@ const Feature = styled.div`
   @media only screen and (max-width: 1340px) {
     flex-direction: column;
     text-align: center;
+    align-items: center;
 
     h2,
     p {
@@ -347,7 +363,9 @@ const Feature = styled.div`
     }
 
     .feature__main-feature {
-      margin-left: 0;
+      width: 100%;
+      max-width: 32rem;
+
       p {
         margin-bottom: 2.4rem;
       }
@@ -356,10 +374,6 @@ const Feature = styled.div`
         margin-bottom: 5rem;
       }
     }
-
-    .feature__main-feature--right {
-      margin-right: 0;
-    }
   }
 `
 
@@ -367,7 +381,13 @@ const VideoContainer = styled.span`
   width: 50%;
   height: 65rem;
   background: ${({ bg }) => (bg === "blue" ? "var(--blue)" : "var(--yellow)")};
-  border-radius: 1rem 0 0 1rem;
+  border-radius: 2rem 0 0 2rem;
+
+  @media only screen and (max-width: 1340px) {
+    width: 100%;
+    border-radius: 2rem 2rem 0 0;
+    height: 25rem;
+  }
 `
 
 const MiniFeatures = styled.div`
@@ -389,14 +409,12 @@ const MiniFeatures = styled.div`
 
   @media only screen and (max-width: 1340px) {
     flex-direction: column;
-    margin-top: 0;
+    padding: 8rem 3rem;
+    margin: 0;
 
     .mini-features__description {
+      text-align: center;
       max-width: unset;
-      p {
-        margin-top: 1.6rem;
-        margin-bottom: 5rem;
-      }
     }
   }
 `
@@ -404,6 +422,10 @@ const MiniFeatures = styled.div`
 const Pricing = styled.section`
   padding: 10rem 0;
   background: #f2f6f9;
+
+  @media only screen and (max-width: 1340px) {
+    padding: 8rem 3rem;
+  }
 `
 
 const PricingContentWrapper = styled.div`
@@ -421,8 +443,6 @@ const PricingContentWrapper = styled.div`
   }
 
   @media only screen and (max-width: 1340px) {
-    margin-top: 7rem;
-
     h2,
     p {
       margin-top: 1.6rem;
@@ -449,6 +469,10 @@ const PricingWrapper = styled.div`
 const Testimonials = styled.section`
   padding: 10rem 0;
   background: var(--dark-gray);
+
+  @media only screen and (max-width: 1340px) {
+    padding: 8rem 3rem;
+  }
 `
 
 const TestimonialsWrapper = styled.div`
@@ -473,10 +497,6 @@ const TestimonialsWrapper = styled.div`
     font-weight: 500;
     font-size: 1.6rem;
     color: var(--white);
-  }
-
-  @media only screen and (max-width: 1340px) {
-    margin-top: 7rem;
   }
 `
 

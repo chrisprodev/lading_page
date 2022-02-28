@@ -8,22 +8,13 @@ const Footer = () => {
   return (
     <Wrapper>
       <Container>
-        <img
-          className="footer-container__logo"
-          src={"/logo.svg"}
-          alt="vidbox logo"
-          width={140}
-          height={36}
-        />
         <Links>
           <Link to="/">Privacy statement</Link>
           <Link to="/">Terms of service</Link>
           <Link to="/">Careers</Link>
+          <Link to="/">Privacy Statement</Link>
         </Links>
-        <SocialMedia>
-          <Twitter />
-          <Linkedin />
-        </SocialMedia>
+        <span>Copyright © 2022 Vidbox</span>
       </Container>
     </Wrapper>
   )
@@ -32,14 +23,14 @@ const Footer = () => {
 export default Footer
 
 const Wrapper = styled.footer`
-  margin-top: 20rem;
-  background: #262633;
+  margin-top: 10rem;
   height: 8rem;
   display: flex;
   align-items: center;
+  border-top: solid 1px var(--gray-3);
 
   @media only screen and (max-width: 1340px) {
-    margin-top: 10rem;
+    margin-top: 8rem;
     height: auto;
     padding: 3rem 0;
   }
@@ -58,6 +49,13 @@ const Container = styled.div`
     transform: scale(0.9);
   }
 
+  span {
+    color: var(--black);
+    opacity: 0.8;
+    font-size: 1.6rem;
+    font-weight: 400;
+  }
+
   @media only screen and (max-width: 1340px) {
     flex-direction: column;
   }
@@ -68,12 +66,14 @@ const Links = styled.div`
   justify-content: space-between;
 
   a {
-    color: var(--gray-2);
+    color: var(--black);
+    opacity: 0.8;
     margin-left: 4rem;
     font-size: 1.6rem;
     transition: color 150ms ease;
+    font-weight: 400;
     :hover {
-      color: var(--white);
+      color: var(--blue);
     }
   }
 
