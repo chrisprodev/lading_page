@@ -25,17 +25,17 @@ const Card = styled.div`
   margin-bottom: 2rem;
   border-radius: 1rem;
   padding: 3rem;
-  background: #262633;
+  background: var(--opacity-05);
 
   p {
     font-size: 1.6rem;
     line-height: 2.8rem;
-    color: var(--gray-2);
+    color: var(--opacity-7);
   }
 
   .card__datetime {
     margin-top: 2rem;
-    color: var(--gray-2);
+    color: var(--opacity-3);
     display: block;
     margin-top: 3rem;
     font-size: 1.6rem;

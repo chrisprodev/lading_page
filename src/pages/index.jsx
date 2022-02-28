@@ -155,23 +155,24 @@ export default function Home() {
                 </PricingWrapper>
               </PricingContentWrapper>
             </Pricing>
-
             <Testimonials>
-              <h2>Take your business to the next level</h2>
-              <p className="testimonials__sub-title">
-                Become part of a growing community of innovative Entrepreneurs,
-                Marketers and Agencies.
-              </p>
-              <TestimonialsGrid>
-                {testimonials.map(element => (
-                  <TestimonialCard
-                    user={element.user}
-                    account={element.account}
-                    body={element.description}
-                    date={element.date}
-                  />
-                ))}
-              </TestimonialsGrid>
+              <TestimonialsWrapper>
+                <h2>Take your business to the next level</h2>
+                <p className="testimonials__sub-title">
+                  Become part of a growing community of innovative
+                  Entrepreneurs, Marketers and Agencies.
+                </p>
+                <TestimonialsGrid>
+                  {testimonials.map(element => (
+                    <TestimonialCard
+                      user={element.user}
+                      account={element.account}
+                      body={element.description}
+                      date={element.date}
+                    />
+                  ))}
+                </TestimonialsGrid>
+              </TestimonialsWrapper>
             </Testimonials>
             <FAQs>
               <h2>Frequently asked questions</h2>
@@ -446,21 +447,25 @@ const PricingWrapper = styled.div`
 `
 
 const Testimonials = styled.section`
+  padding: 10rem 0;
+  background: var(--dark-gray);
+`
+
+const TestimonialsWrapper = styled.div`
   display: flex;
   flex-direction: column;
   width: 100%;
   max-width: 129rem;
-  margin-top: 23rem;
   margin-left: auto;
   margin-right: auto;
 
-  h2,
   p {
     margin-top: 2rem;
   }
 
   h2,
   .testimonials__sub-title {
+    color: #fff;
     text-align: center;
   }
 
@@ -474,6 +479,7 @@ const Testimonials = styled.section`
     margin-top: 7rem;
   }
 `
+
 const TestimonialsGrid = styled.div`
   margin-top: 5rem;
   columns: 3 auto;
