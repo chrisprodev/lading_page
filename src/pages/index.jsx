@@ -144,15 +144,16 @@ export default function Home() {
                 </div>
               </MiniFeatures>
             </Features>
-
             <Pricing>
-              <h2>Find the plan that is right for you</h2>
-              <p>No hiden fees.</p>
-              <PricingWrapper>
-                {pricingTable.map(card => (
-                  <PricingCard {...card} />
-                ))}
-              </PricingWrapper>
+              <PricingContentWrapper>
+                <h2>Find the plan that is right for you</h2>
+                <p>No hiden fees.</p>
+                <PricingWrapper>
+                  {pricingTable.map(card => (
+                    <PricingCard {...card} />
+                  ))}
+                </PricingWrapper>
+              </PricingContentWrapper>
             </Pricing>
 
             <Testimonials>
@@ -400,12 +401,16 @@ const MiniFeatures = styled.div`
 `
 
 const Pricing = styled.section`
+  padding: 10rem 0;
+  background: #f2f6f9;
+`
+
+const PricingContentWrapper = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   width: 100%;
   max-width: 129rem;
-  margin-top: 23rem;
   margin-left: auto;
   margin-right: auto;
 
@@ -431,7 +436,7 @@ const Pricing = styled.section`
 const PricingWrapper = styled.div`
   display: flex;
   justify-content: space-between;
-  gap: 2rem;
+  gap: 3rem;
   margin-top: 5rem;
 
   @media only screen and (max-width: 1340px) {

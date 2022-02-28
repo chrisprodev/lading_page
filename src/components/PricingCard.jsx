@@ -43,29 +43,30 @@ const Container = styled.div`
   align-items: center;
   border-radius: 1rem;
   padding: 3rem;
-  background: #262633;
+  background: #fff;
   width: 26rem;
   transition: all 100ms ease;
 
   :hover {
-    outline: solid 2px var(--purple);
+    outline: solid 2px var(--blue);
   }
 
   span {
     font-size: 1.6rem;
     line-height: 2.8rem;
-    color: var(--gray-2);
+    color: var(--black);
+    opacity: 0.8;
   }
 
   .pricing__price {
     font-weight: 600;
     margin-top: 4rem;
     font-size: 6.2rem;
-    color: var(--white);
+    color: var(--black);
+    opacity: 1;
   }
 
   .pricing__tag {
-    color: var(--gray-2);
     margin-top: 2rem;
   }
 
@@ -90,7 +91,7 @@ const Container = styled.div`
       span {
         font-size: 1.6rem;
         line-height: 3.6rem;
-        color: var(--gray-2);
+        opacity: 1;
       }
     }
   }
@@ -99,20 +100,21 @@ const Container = styled.div`
     cursor: pointer;
     width: 100%;
     height: 4.8rem;
-    background: var(--purple);
-    color: var(--white);
+    background: var(--blue);
+    color: #fff;
     border-radius: 1rem;
     border: none;
     font-size: 1.6rem;
     transition: all 150ms ease;
 
     :hover {
-      background: var(--purple-hover);
+      background: var(--blue-2);
     }
   }
 
   small {
-    color: var(--gray-2);
+    color: var(--black);
+    opacity: 0.8;
     margin-top: 1rem;
     font-size: 1.4rem;
   }
