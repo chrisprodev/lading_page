@@ -4,10 +4,11 @@
   --purple:#6333ff;
   --purple-hover:#532bd8;
   --white:#eff5f8;
-  --gray:#73869a;
+  --gray:rgba(0, 0, 0, 0.05);
   --gray-2:#889cb2;
   --gray-3:#c4d5e7;
   --green:#45D9BE;
+  --blue:#1081FF;
 }
 
 html{
@@ -19,7 +20,6 @@ body {
   font-family: 'Inter', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #0E0E12;
 }
 
 a{

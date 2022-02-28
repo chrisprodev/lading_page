@@ -45,7 +45,7 @@ const MainContainer = styled.nav`
   left: 0;
   right: 0;
   z-index: 99;
-  background: #0e0e12;
+  //background: #0e0e12;
   padding: 0rem 2rem;
 `
 
@@ -76,39 +76,39 @@ const BlockTwo = styled.div`
 
   .navbar-container__loginbtn {
     cursor: pointer;
-    width: 10rem;
+    width: 8rem;
     height: 4.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
     border-radius: 4rem;
-    outline: solid 2px var(--purple);
     margin-right: 2rem;
     transition: all 150ms ease;
 
     a {
-      color: var(--white);
+      color: rgba(255, 255, 255, 0.7);
       font-size: 1.6rem;
     }
 
     :hover {
-      background: var(--purple);
+      background: rgba(255, 255, 255, 1);
+      background: var(--gray);
     }
   }
 
   .navbar-container__demobtn {
-    width: 20rem;
+    width: 17rem;
     height: 4.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 4rem;
+    border-radius: 1rem;
     border: none;
-    background: var(--purple);
+    background: var(--blue);
     transition: all 150ms ease;
 
     a {
-      color: var(--white);
+      color: #fff;
       font-size: 1.6rem;
     }
 
@@ -124,12 +124,12 @@ const BlockTwo = styled.div`
 
 const Menu = styled.div`
   a {
-    color: var(--gray);
+    color: rgba(255, 255, 255, 0.7);
     margin-left: 4rem;
     font-size: 1.6rem;
     transition: color 150ms ease;
     :hover {
-      color: var(--white);
+      color: #fff;
     }
   }
 
