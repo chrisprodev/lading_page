@@ -1,16 +1,20 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
 
 :root{
+  --black:rgba(0, 0, 0, 0.8);
   --purple:#6333ff;
   --purple-hover:#532bd8;
   --white:#eff5f8;
-  --gray:#a5b6c9;
+  --gray:#596674;
   --gray-2:#889cb2;
   --gray-3:#c4d5e7;
-  --green:#45D9BE;
+  --green:#38B349;
+  --yellow:#FFDA55;
+  --orange:#F9A439;
   --blue:#1081FF;
-  --blue-2:#1177eb;
+  --blue-2:#1A4AB9;
   --opacity-7:rgba(255, 255, 255, 0.7);
+  --opacity-5:rgba(255, 255, 255, 0.5);
   --opacity-3:rgba(255, 255, 255, 0.3);
   --opacity-15:rgba(255, 255, 255, 0.15);
   --opacity-05:rgba(255, 255, 255, 0.05);
@@ -38,7 +42,7 @@ h2,
 h3,
 h4,
 h5 {
-  color: var(--white);
+  color: var(--black);
   margin: 0;
 }
 
@@ -55,7 +59,8 @@ h4{
 }
 
 p {
-  color: #73869a;
+  color: var(--black);
+  opacity: 0.8;
   font-size: 2rem;
   line-height: 3.6rem;
   margin: 0;

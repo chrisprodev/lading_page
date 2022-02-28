@@ -69,141 +69,80 @@ export default function Home() {
               </div>
             </Logos>
             <Features>
-              <Feature>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30%"
-                  height="auto"
-                  viewBox="0 0 416 765"
-                >
-                  <defs>
-                    <radialGradient
-                      id="radial-gradient"
-                      cx="0"
-                      cy="0"
-                      r="1.217"
-                      gradientTransform="matrix(0.212, 0.977, -2.889, 0.628, 0, 0)"
-                      gradientUnits="objectBoundingBox"
-                    >
-                      <stop offset="0" stop-color="#e57a62" />
-                      <stop offset="1" stop-color="#813cc4" />
-                    </radialGradient>
-                  </defs>
-                  <rect
-                    id="Rectangle_3"
-                    width="416"
-                    height="765"
-                    rx="20"
-                    fill="url(#radial-gradient)"
-                  />
-                </svg>
+              <Feature bg="green">
+                <VideoContainer></VideoContainer>
                 <div className="feature__main-feature">
                   <h2>The Ultimate Creative Solution</h2>
                   <p className="main-feature__description">
                     Replace dozens of tools, save money, and manage your entire
                     video business needs from anywhere with one simple platform.
                   </p>
-                  <MiniFeatures>
-                    <div className="mini-features__description">
-                      <h4>Easy to use</h4>
-                      <p>
-                        Say goodbye to clunky video software and hello to
-                        one-click editing online. No training needed.
-                      </p>
-                    </div>
-                    <div className="mini-features__description">
-                      <h4>Tell your story</h4>
-                      <p>
-                        Produce material that engages and grows your audiences.
-                      </p>
-                    </div>
-                  </MiniFeatures>
-                  <MiniFeatures>
-                    <div className="mini-features__description">
-                      <h4>Add subtitles</h4>
-                      <p>
-                        Say goodbye to clunky video software and hello to
-                        one-click editing online. No training needed.
-                      </p>
-                    </div>
-                    <div className="mini-features__description">
-                      <h4>Sound design</h4>
-                      <p>
-                        Produce material that engages and grows your audiences.
-                      </p>
-                    </div>
-                  </MiniFeatures>
                 </div>
               </Feature>
-              <Feature>
-                <div className="feature__main-feature feature__main-feature--right">
+              <MiniFeatures>
+                <div className="mini-features__description">
+                  <h4>Easy to use</h4>
+                  <p>
+                    Say goodbye to clunky video software and hello to one-click
+                    editing online. No training needed.
+                  </p>
+                </div>
+                <div className="mini-features__description">
+                  <h4>Tell your story</h4>
+                  <p>Produce material that engages and grows your audiences.</p>
+                </div>
+                <div className="mini-features__description">
+                  <h4>Add subtitles</h4>
+                  <p>
+                    Say goodbye to clunky video software and hello to one-click
+                    editing online. No training needed.
+                  </p>
+                </div>
+                <div className="mini-features__description">
+                  <h4>Sound design</h4>
+                  <p>Produce material that engages and grows your audiences.</p>
+                </div>
+              </MiniFeatures>
+              <Feature bg="blue">
+                <VideoContainer bg="blue"></VideoContainer>
+                <div className="feature__main-feature">
                   <h2>Market your products</h2>
                   <p className="main-feature__description">
                     Position your marketing team for rapid growth. Whether you
                     have a video editor on staff who needs support or you are
                     handling the creative on your own.
                   </p>
-                  <MiniFeatures>
-                    <div className="mini-features__description">
-                      <h4>Deliverables in Days</h4>
-                      <p>
-                        Designers ensures that you do not miss opportunities by
-                        delivering created by professional video editors.
-                      </p>
-                    </div>
-                    <div className="mini-features__description">
-                      <h4>Time Savings</h4>
-                      <p>
-                        You can request new videos, ask for revisions through an
-                        intuitive and engaging portal.
-                      </p>
-                    </div>
-                  </MiniFeatures>
-                  <MiniFeatures>
-                    <div className="mini-features__description">
-                      <h4>Cost Efficiency</h4>
-                      <p>
-                        Say goodbye to clunky video software and hello to
-                        one-click editing online. No training needed.
-                      </p>
-                    </div>
-                    <div className="mini-features__description">
-                      <h4>Unmatched Skills</h4>
-                      <p>
-                        Our team has video editors with over 10 years of
-                        experience.
-                      </p>
-                    </div>
-                  </MiniFeatures>
                 </div>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="30%"
-                  height="auto"
-                  viewBox="0 0 416 765"
-                >
-                  <defs>
-                    <radialGradient
-                      id="radial-gradient"
-                      cx="0"
-                      cy="0"
-                      r="1.217"
-                      gradientTransform="matrix(0.212, 0.977, -2.889, 0.628, 0, 0)"
-                      gradientUnits="objectBoundingBox"
-                    >
-                      <stop offset="0" stop-color="#7D47E2" />
-                      <stop offset="1" stop-color="#447F8C" />
-                    </radialGradient>
-                  </defs>
-                  <rect
-                    id="Rectangle_3"
-                    width="416"
-                    height="765"
-                    rx="20"
-                    fill="url(#radial-gradient)"
-                  />
-                </svg>
               </Feature>
+              <MiniFeatures>
+                <div className="mini-features__description">
+                  <h4>Deliverables in Days</h4>
+                  <p>
+                    Designers ensures that you do not miss opportunities by
+                    delivering created by professional video editors.
+                  </p>
+                </div>
+                <div className="mini-features__description">
+                  <h4>Time Savings</h4>
+                  <p>
+                    You can request new videos, ask for revisions through an
+                    intuitive and engaging portal.
+                  </p>
+                </div>
+                <div className="mini-features__description">
+                  <h4>Cost Efficiency</h4>
+                  <p>
+                    Say goodbye to clunky video software and hello to one-click
+                    editing online. No training needed.
+                  </p>
+                </div>
+                <div className="mini-features__description">
+                  <h4>Unmatched Skills</h4>
+                  <p>
+                    Our team has video editors with over 10 years of experience.
+                  </p>
+                </div>
+              </MiniFeatures>
             </Features>
 
             <Pricing>
@@ -275,6 +214,7 @@ const ContentWrapper = styled.div`
   }
 
   h1 {
+    color: #fff;
     max-width: 64rem;
     text-align: center;
   }
@@ -320,19 +260,19 @@ const Logos = styled.section`
   align-items: center;
   width: 100%;
   max-width: 129rem;
-  margin-top: 10rem;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 12rem auto;
 
   h5 {
     font-size: 1.8rem;
     text-align: center;
     line-height: 2rem;
-    color: var(--gray);
+    color: var(--black);
+    opacity: 0.7;
+    font-weight: 400;
   }
 
   .logos__container {
-    margin-top: 4rem;
+    margin-top: 3rem;
     width: 60%;
     display: flex;
     justify-content: space-between;
@@ -341,8 +281,7 @@ const Logos = styled.section`
     svg {
       height: 3.6rem;
       width: auto;
-      color: var(--gray);
-      opacity: 0.5;
+      color: var(--black);
       margin: 3rem 3rem 0 3rem;
     }
   }
@@ -371,44 +310,34 @@ const Features = styled.section`
   flex-direction: column;
   justify-content: space-between;
   width: 100%;
-  max-width: 129rem;
-  margin-top: 3rem;
+  max-width: 138rem;
   margin-left: auto;
   margin-right: auto;
 `
 const Feature = styled.div`
-  margin-top: 22rem;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-
-  svg {
-    flex-shrink: 0;
-  }
+  background: ${({ bg }) =>
+    bg === "green" ? "var(--orange)" : "var(--blue-2)"};
+  border-radius: 1rem;
 
   .feature__main-feature {
-    margin-left: 12.4rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 50%;
+    align-items: center;
 
     h2,
     p {
       margin-top: 2rem;
+      color: #fff;
+      max-width: 51rem;
     }
-  }
-
-  .feature__main-feature--right {
-    margin-left: 0;
-    margin-right: 12.4rem;
   }
 
   @media only screen and (max-width: 1340px) {
-    margin-top: 7rem;
     flex-direction: column;
     text-align: center;
-
-    svg {
-      order: -1;
-      width: 60%;
-    }
 
     h2,
     p {
@@ -417,7 +346,6 @@ const Feature = styled.div`
 
     .feature__main-feature {
       margin-left: 0;
-      margin-top: 4rem;
       p {
         margin-bottom: 2.4rem;
       }
@@ -433,13 +361,23 @@ const Feature = styled.div`
   }
 `
 
+const VideoContainer = styled.span`
+  width: 50%;
+  height: 65rem;
+  background: ${({ bg }) => (bg === "blue" ? "var(--blue)" : "var(--yellow)")};
+  border-radius: 1rem 0 0 1rem;
+`
+
 const MiniFeatures = styled.div`
   display: flex;
   justify-content: space-between;
-  margin-top: 9rem;
+  gap: 8rem;
+  margin: 16rem auto;
+  max-width: 129rem;
 
   .mini-features__description {
-    max-width: 29rem;
+    max-width: 28rem;
+
     p {
       font-size: 1.8rem;
       margin-top: 2.4rem;
