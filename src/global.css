@@ -9,8 +9,10 @@
   --gray-3:#c4d5e7;
   --green:#45D9BE;
   --blue:#1081FF;
+  --blue-2:#1177eb;
   --opacity-7:rgba(255, 255, 255, 0.7);
   --opacity-3:rgba(255, 255, 255, 0.3);
+  --opacity-15:rgba(255, 255, 255, 0.15);
   --opacity-05:rgba(255, 255, 255, 0.05);
 }
 

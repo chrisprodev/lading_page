@@ -86,13 +86,12 @@ const BlockTwo = styled.div`
     transition: all 150ms ease;
 
     a {
-      color: rgba(255, 255, 255, 0.7);
+      color: var(--opacity-7);
       font-size: 1.6rem;
     }
 
     :hover {
-      background: rgba(255, 255, 255, 1);
-      background: var(--gray);
+      background: var(--opacity-15);
     }
   }
 
@@ -104,16 +103,15 @@ const BlockTwo = styled.div`
     align-items: center;
     border-radius: 1rem;
     border: none;
-    background: var(--blue);
+    background: #fff;
     transition: all 150ms ease;
 
     a {
-      color: #fff;
       font-size: 1.6rem;
     }
 
     :hover {
-      background: var(--purple-hover);
+      background: var(--opacity-7);
     }
   }
 
@@ -124,7 +122,7 @@ const BlockTwo = styled.div`
 
 const Menu = styled.div`
   a {
-    color: rgba(255, 255, 255, 0.7);
+    color: var(--opacity-7);
     margin-left: 4rem;
     font-size: 1.6rem;
     transition: color 150ms ease;
