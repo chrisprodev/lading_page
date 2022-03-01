@@ -61,36 +61,43 @@ export const logosData = [
 
 export const faqs = [
   {
+    initialState: true,
     title: "Who owns the Copyright of the video?",
     content:
       "You are the owner of the final video and also the copyright of the video. You are free to use it as you want.",
   },
   {
+    initialState: false,
     title: "Can the video production process be done faster?",
     content:
       "Yes, but it also means costs will increase to allocate more people to work on the production to have it completed faster. Creating an engaging, outreaching, and indelible impression with video takes time! So, it's advisable not to dash through the process. Sometimes you don't have a choice. In special situations, we'll design a personalized timeline for, so both sides can execute the task. Occasionally, this means less rounds of changes and/or a maximum of 24hs feedback on your end... Contact us about your specific project needs.",
   },
   {
+    initialState: false,
     title: "How does the process go about?",
     content:
       "We’ll need to know everything you can tell us about your project and goals. This is done with but not only by completing our creative brief and spending some time on a discovery call. Afterwards, we’ll get together to brainstorm some compelling ways to tell your story. We present you with an engaging idea. Then comes a script, once you approve it, the voice over will be recorded by a professional voice artist while we begin assembling the ideas into graphics presented as a storyboard. We continue with the magic of illustration to show you how the final graphics of the video will look like afterwards the animation stage begins. The final stage of the production process is the audio mix, which includes music and sound effects, once finished your video will be ready to go.      ",
   },
   {
+    initialState: false,
     title: "Can you do various videos simultaneously if needed?",
     content:
       "We’re able to produce several videos simultaneously if necessary; however, this could cause a bit of an increase on the timeframe.",
   },
   {
+    initialState: false,
     title: "Which format is the final video in?",
     content:
       "We'll deliver your video in mp4 h264, so you can upload it to YouTube, Vimeo or any platform you wish. We can supply other different formats if necessary, please let us know if you need it in a different specific format.",
   },
   {
+    initialState: false,
     title: "Why animation?",
     content:
       "Animation is an incredible tool that has been exploited both in entertainment and education for decades before it became the acclaimed hit in marketing. It reaches a broader audience while boosting engagement and brand awareness with videos that create banging impressions. Professionally animated videos are inexpensive in comparison to its live action counterpart. Animation is also better suited for explaining concepts in marketing. Contact us and allow us to illustrate the power of animation.",
   },
   {
+    initialState: false,
     title: "Why should I use an animated explainer video?",
     content:
       "Well, one reason to invest is to boost your brand’s engagement with prospective clients. With animated explainer videos, we can help you reach a broader audience while increasing awareness and engagement with your brand by making stunning impressions. This is the best way to be a cut above the rest!",

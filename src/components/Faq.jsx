@@ -1,8 +1,8 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 
-const Faq = ({ title, content }) => {
-  const [open, setOpen] = useState(false)
+const Faq = ({ title, content, initialState }) => {
+  const [open, setOpen] = useState(initialState ? true : false)
 
   return (
     <Container open={open}>
@@ -58,10 +58,10 @@ const Container = styled.div`
   padding: 2rem;
   border-radius: 1rem;
   transition: background 50ms ease;
-  background: ${props => (props.open ? "#262633" : "none")};
+  background: ${props => (props.open ? "var(--black-05)" : "none")};
 
   :hover {
-    background: #262633;
+    background: var(--black-05);
   }
 
   @media only screen and (max-width: 1340px) {
@@ -84,8 +84,8 @@ const Header = styled.div`
 
   p {
     font-size: 2rem;
-    font-weight: 600;
-    color: var(--white);
+    font-weight: 500;
+    opacity: 1;
   }
 
   svg {
@@ -93,7 +93,7 @@ const Header = styled.div`
     transform: ${props => (props.open ? "rotate(180deg)" : "rotate(0deg)")};
     line {
       transition: all 400ms ease;
-      stroke: ${props => (props.open ? "var(--white)" : "var(--gray)")};
+      stroke: var(--black);
     }
   }
 
@@ -107,5 +107,4 @@ const Header = styled.div`
 const Content = styled.p`
   margin-top: 1.6rem;
   font-size: 1.8rem;
-  color: var(--gray-2);
 `

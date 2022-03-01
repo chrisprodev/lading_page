@@ -185,7 +185,11 @@ export default function Home() {
             <FAQs>
               <h2>Frequently asked questions</h2>
               {faqs.map(question => (
-                <Faq title={question.title} content={question.content} />
+                <Faq
+                  title={question.title}
+                  content={question.content}
+                  initialState={question.initialState}
+                />
               ))}
             </FAQs>
           </Container>
@@ -521,13 +525,15 @@ const FAQs = styled.section`
   flex-direction: column;
   width: 100%;
   max-width: 129rem;
-  margin-top: 23rem;
+  margin-top: 10rem;
   margin-left: auto;
   margin-right: auto;
 
-  @media only screen and (max-width: 1340px) {
-    margin-top: 7rem;
+  h2 {
+    margin-bottom: 3rem;
+  }
 
+  @media only screen and (max-width: 1340px) {
     h2 {
       text-align: center;
     }
