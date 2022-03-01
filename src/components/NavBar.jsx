@@ -1,11 +1,29 @@
+import React, { useState, useEffect } from "react"
 import { Link } from "gatsby"
-import React from "react"
 import styled from "styled-components"
 
 const NavBar = ({ menu, onOpenMobileMenu }) => {
+  const [show, setShow] = useState(false)
+  const [animation, setAnimation] = useState(false)
+
+  useEffect(() => {
+    window.scrollTo(0, 0)
+    if (window.document.location.pathname === "/") {
+      setAnimation(true)
+      window.addEventListener("scroll", handleScroll)
+      return () => window.removeEventListener("scroll", handleScroll)
+    } else {
+      setShow(true)
+    }
+  }, [])
+
+  const handleScroll = () => {
+    setShow(window.pageYOffset > 80)
+  }
+
   return (
-    <MainContainer>
-      <Container>
+    <MainContainer animation={animation} bg={show}>
+      <Container animation={animation} bg={show}>
         <BlockOne>
           <img
             className="navbar-container__logo"
@@ -45,8 +63,9 @@ const MainContainer = styled.nav`
   left: 0;
   right: 0;
   z-index: 99;
-  //background: #0e0e12;
   padding: 0rem 2rem;
+  transition: all 450ms ease;
+  background-color: ${({ bg }) => (bg ? "var(--dark-gray)" : "transparent")};
 `
 
 const Container = styled.div`
@@ -81,7 +100,7 @@ const BlockTwo = styled.div`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 4rem;
+    border-radius: 1rem;
     margin-right: 2rem;
     transition: all 150ms ease;
 
@@ -96,6 +115,7 @@ const BlockTwo = styled.div`
   }
 
   .navbar-container__demobtn {
+    cursor: pointer;
     width: 17rem;
     height: 4.4rem;
     display: flex;

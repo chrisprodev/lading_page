@@ -1,7 +1,6 @@
 import React, { useState } from "react"
 import styled from "styled-components"
 import { Link } from "gatsby"
-import { faqs, logosData, pricingTable, testimonials } from "../constants/data"
 import TestimonialCard from "../components/TestimonialCard"
 import PricingCard from "../components/PricingCard"
 import MobileMenu from "../components/MobileMenu"
@@ -9,6 +8,13 @@ import NavBar from "../components/NavBar"
 import Footer from "../components/Footer"
 import Modal from "../components/Modal"
 import Faq from "../components/Faq"
+import {
+  faqs,
+  features,
+  logosData,
+  pricingTable,
+  testimonials,
+} from "../constants/data"
 import "../global.css"
 
 export default function Home() {
@@ -70,86 +76,28 @@ export default function Home() {
             </Logos>
             <FeatureWrapper>
               <Features>
-                <Feature bg="green">
-                  <VideoContainer></VideoContainer>
-                  <div className="feature__main-feature">
-                    <h2>The Ultimate Creative Solution</h2>
-                    <p className="main-feature__description">
-                      Replace dozens of tools, save money, and manage your
-                      entire video business needs from anywhere with one simple
-                      platform.
-                    </p>
-                  </div>
-                </Feature>
-                <MiniFeatures>
-                  <div className="mini-features__description">
-                    <h4>Easy to use</h4>
-                    <p>
-                      Say goodbye to clunky video software and hello to
-                      one-click editing online. No training needed.
-                    </p>
-                  </div>
-                  <div className="mini-features__description">
-                    <h4>Tell your story</h4>
-                    <p>
-                      Produce material that engages and grows your audiences.
-                    </p>
-                  </div>
-                  <div className="mini-features__description">
-                    <h4>Add subtitles</h4>
-                    <p>
-                      Say goodbye to clunky video software and hello to
-                      one-click editing online. No training needed.
-                    </p>
-                  </div>
-                  <div className="mini-features__description">
-                    <h4>Sound design</h4>
-                    <p>
-                      Produce material that engages and grows your audiences.
-                    </p>
-                  </div>
-                </MiniFeatures>
-                <Feature bg="blue">
-                  <VideoContainer bg="blue"></VideoContainer>
-                  <div className="feature__main-feature">
-                    <h2>Market your products</h2>
-                    <p className="main-feature__description">
-                      Position your marketing team for rapid growth. Whether you
-                      have a video editor on staff who needs support or you are
-                      handling the creative on your own.
-                    </p>
-                  </div>
-                </Feature>
-                <MiniFeatures>
-                  <div className="mini-features__description">
-                    <h4>Deliverables in Days</h4>
-                    <p>
-                      Designers ensures that you do not miss opportunities by
-                      delivering created by professional video editors.
-                    </p>
-                  </div>
-                  <div className="mini-features__description">
-                    <h4>Time Savings</h4>
-                    <p>
-                      You can request new videos, ask for revisions through an
-                      intuitive and engaging portal.
-                    </p>
-                  </div>
-                  <div className="mini-features__description">
-                    <h4>Cost Efficiency</h4>
-                    <p>
-                      Say goodbye to clunky video software and hello to
-                      one-click editing online. No training needed.
-                    </p>
-                  </div>
-                  <div className="mini-features__description">
-                    <h4>Unmatched Skills</h4>
-                    <p>
-                      Our team has video editors with over 10 years of
-                      experience.
-                    </p>
-                  </div>
-                </MiniFeatures>
+                {features.map(feature => (
+                  <>
+                    <Feature bg={feature.color}>
+                      <VideoContainer bg={feature.color}></VideoContainer>
+                      <div className="feature__main-feature">
+                        <h2>{feature.mainTitle}</h2>
+                        <p className="main-feature__description">
+                          {feature.mainDesc}
+                        </p>
+                      </div>
+                    </Feature>
+                    <MiniFeatures>
+                      {feature.subFeats.map(subFeat => (
+                        <div className="mini-features__description">
+                          {subFeat.icon && subFeat.icon}
+                          <h4>{subFeat.title}</h4>
+                          <p>{subFeat.desc}</p>
+                        </div>
+                      ))}
+                    </MiniFeatures>
+                  </>
+                ))}
               </Features>
             </FeatureWrapper>
             <Pricing>
@@ -338,7 +286,7 @@ const Features = styled.div`
 const Feature = styled.div`
   display: flex;
   background: ${({ bg }) =>
-    bg === "green" ? "var(--orange)" : "var(--blue-2)"};
+    bg === "orange" ? "var(--orange)" : "var(--blue-2)"};
   border-radius: 2rem;
 
   .feature__main-feature {
@@ -384,7 +332,8 @@ const Feature = styled.div`
 const VideoContainer = styled.span`
   width: 50%;
   height: 65rem;
-  background: ${({ bg }) => (bg === "blue" ? "var(--blue)" : "var(--yellow)")};
+  background: ${({ bg }) =>
+    bg === "orange" ? "var(--yellow)" : "var(--blue)"};
   border-radius: 2rem 0 0 2rem;
 
   @media only screen and (max-width: 1340px) {
@@ -403,6 +352,11 @@ const MiniFeatures = styled.div`
 
   .mini-features__description {
     max-width: 28rem;
+
+    svg {
+      height: 5rem;
+      margin-bottom: 3rem;
+    }
 
     p {
       font-size: 1.8rem;

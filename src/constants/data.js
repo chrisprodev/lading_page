@@ -59,6 +59,299 @@ export const logosData = [
   </svg>,
 ]
 
+export const features = [
+  {
+    color: "orange",
+    mainTitle: "The Ultimate Creative Solution",
+    mainDesc:
+      "Replace dozens of tools, save money, and manage your entire video business needs from anywhere with one simple platform.",
+    subFeats: [
+      {
+        icon: (
+          <svg
+            id="Layer_1"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 81.52 81.52"
+          >
+            <circle
+              cx="40.76"
+              cy="40.76"
+              r="40.76"
+              style={{ fill: "#f8a438" }}
+            />
+            <path
+              d="M50.23,77a27,27,0,0,0,27-27H23.26A27,27,0,0,0,50.23,77Z"
+              transform="translate(-9.47 -9.3)"
+              style={{ fill: "#ffda54" }}
+            />
+          </svg>
+        ),
+        title: "Easy to use",
+        desc: "Say goodbye to clunky video software and hello to one-click editing online. No training needed.",
+      },
+      {
+        icon: (
+          <svg
+            id="Layer_1"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 67.14 81.52"
+          >
+            <rect width="67.14" height="81.52" style={{ fill: "#09f" }} />
+            <line
+              x1="7.73"
+              y1="8.7"
+              x2="39.75"
+              y2="8.7"
+              style={{
+                fill: "none",
+                stroke: "#1a49ba",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: "3px",
+              }}
+            />
+            <line
+              x1="7.73"
+              y1="16.7"
+              x2="58.75"
+              y2="16.7"
+              style={{
+                fill: "none",
+                stroke: "#1a49ba",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: "3px",
+              }}
+            />
+            <line
+              x1="7.73"
+              y1="24.7"
+              x2="58.75"
+              y2="24.7"
+              style={{
+                fill: "none",
+                stroke: "#1a49ba",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: "3px",
+              }}
+            />
+            <line
+              x1="7.73"
+              y1="32.7"
+              x2="58.75"
+              y2="32.7"
+              style={{
+                fill: "none",
+                stroke: "#1a49ba",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: "3px",
+              }}
+            />
+            <line
+              x1="7.73"
+              y1="40.7"
+              x2="58.75"
+              y2="40.7"
+              style={{
+                fill: "none",
+                stroke: "#1a49ba",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: "3px",
+              }}
+            />
+            <line
+              x1="7.73"
+              y1="48.7"
+              x2="58.75"
+              y2="48.7"
+              style={{
+                fill: "none",
+                stroke: "#1a49ba",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: "3px",
+              }}
+            />
+            <line
+              x1="7.73"
+              y1="56.7"
+              x2="28.75"
+              y2="56.7"
+              style={{
+                fill: "none",
+                stroke: "#1a49ba",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: "3px",
+              }}
+            />
+          </svg>
+        ),
+        title: "Tell your story",
+        desc: "Produce material that engages and grows your audiences.",
+      },
+      {
+        icon: (
+          <svg
+            id="Layer_1"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 81.37 80.43"
+          >
+            <polygon
+              points="81.37 0 0 0 0 65.87 46.11 65.87 46.11 80.43 60.66 65.87 81.37 65.87 81.37 0"
+              style={{ fill: "#02c970" }}
+            />
+            <line
+              x1="8.09"
+              y1="31.28"
+              x2="73.47"
+              y2="31.28"
+              style={{
+                fill: "none",
+                stroke: "#ffda54",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: "3px",
+              }}
+            />
+            <line
+              x1="8.09"
+              y1="39.35"
+              x2="73.47"
+              y2="39.35"
+              style={{
+                fill: "none",
+                stroke: "#ffda54",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: "3px",
+              }}
+            />
+            <line
+              x1="8.09"
+              y1="47.42"
+              x2="73.47"
+              y2="47.42"
+              style={{
+                fill: "none",
+                stroke: "#ffda54",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: "3px",
+              }}
+            />
+            <line
+              x1="8.09"
+              y1="55.5"
+              x2="34.9"
+              y2="55.5"
+              style={{
+                fill: "none",
+                stroke: "#ffda54",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: "3px",
+              }}
+            />
+          </svg>
+        ),
+        title: "Add subtitles",
+        desc: "Say goodbye to clunky video software and hello to one-click editing online. No training needed.",
+      },
+      {
+        icon: (
+          <svg
+            id="Layer_1"
+            data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 74.1 66.3"
+          >
+            <rect
+              y="21.5"
+              width="11.78"
+              height="23.3"
+              style={{ fill: "#1a49ba" }}
+            />
+            <polygon
+              points="11.78 44.8 33.28 64.8 33.28 1.5 11.78 21.5 11.78 44.8"
+              style={{ fill: "#09f" }}
+            />
+            <path
+              d="M55,35a15,15,0,1,1,0,30"
+              transform="translate(-13.7 -16.85)"
+              style={{
+                fill: "none",
+                stroke: "#1a49ba",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: "3px",
+              }}
+            />
+            <path
+              d="M54.75,26.56a23.44,23.44,0,1,1,0,46.88"
+              transform="translate(-13.7 -16.85)"
+              style={{
+                fill: "none",
+                stroke: "#1a49ba",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: "3px",
+              }}
+            />
+            <path
+              d="M54.65,18.35a31.65,31.65,0,0,1,0,63.3"
+              transform="translate(-13.7 -16.85)"
+              style={{
+                fill: "none",
+                stroke: "#1a49ba",
+                strokeLinecap: "round",
+                strokeLinejoin: "round",
+                strokeWidth: "3px",
+              }}
+            />
+          </svg>
+        ),
+        title: "Sound design",
+        desc: "Produce material that engages and grows your audiences.",
+      },
+    ],
+  },
+  {
+    color: "blue",
+    mainTitle: "Market your products",
+    mainDesc:
+      "Position your marketing team for rapid growth. Whether you have a video editor on staff who needs support or you are handling the creative on your own.",
+    subFeats: [
+      {
+        icon: "",
+        title: "Deliverables in Days",
+        desc: "Designers ensures that you do not miss opportunities by delivering created by professional video editors.",
+      },
+      {
+        icon: "",
+        title: "Time Savings",
+        desc: "You can request new videos, ask for revisions through an intuitive and engaging portal.",
+      },
+      {
+        icon: "",
+        title: "Cost Efficiency",
+        desc: "Say goodbye to clunky video software and hello to one-click editing online. No training needed.",
+      },
+      {
+        icon: "",
+        title: "Unmatched Skills",
+        desc: "Our team has video editors with over 10 years of experience.",
+      },
+    ],
+  },
+]
+
 export const faqs = [
   {
     initialState: true,
