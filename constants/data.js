@@ -1,7 +1,8 @@
-import React from "react"
+import React from "react";
 
 export const logosData = [
   <svg
+    key="0001"
     id="Layer_1"
     data-name="Layer 1"
     xmlns="http://www.w3.org/2000/svg"
@@ -14,6 +15,7 @@ export const logosData = [
     />
   </svg>,
   <svg
+    key="0020"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 30 32"
     height="1.6rem"
@@ -25,6 +27,7 @@ export const logosData = [
     ></path>
   </svg>,
   <svg
+    key="0002"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 70 24"
     role="presentation"
@@ -36,6 +39,7 @@ export const logosData = [
     ></path>
   </svg>,
   <svg
+    key="0003"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 39 39"
     role="presentation"
@@ -47,6 +51,7 @@ export const logosData = [
     ></path>
   </svg>,
   <svg
+    key="0004"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 112 32"
     height="1.6rem"
@@ -57,7 +62,7 @@ export const logosData = [
       fill="currentColor"
     ></path>
   </svg>,
-]
+];
 
 export const features = [
   {
@@ -350,7 +355,7 @@ export const features = [
       },
     ],
   },
-]
+];
 
 export const faqs = [
   {
@@ -395,7 +400,7 @@ export const faqs = [
     content:
       "Well, one reason to invest is to boost your brand’s engagement with prospective clients. With animated explainer videos, we can help you reach a broader audience while increasing awareness and engagement with your brand by making stunning impressions. This is the best way to be a cut above the rest!",
   },
-]
+];
 
 export const testimonials = [
   {
@@ -461,7 +466,7 @@ export const testimonials = [
       "Our Explainer Video really helped us to communicate in a quick and efficient way to our customers.",
     date: "Dec 29, 2021",
   },
-]
+];
 
 export const pricingTable = [
   {
@@ -497,4 +502,4 @@ export const pricingTable = [
       "Cancel Any Time",
     ],
   },
-]
+];

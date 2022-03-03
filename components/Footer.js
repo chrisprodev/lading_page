@@ -1,26 +1,32 @@
-import { Link } from "gatsby"
-import React from "react"
-import Linkedin from "./icons/Linkedin"
-import Twitter from "./icons/Twitter"
-import styled from "styled-components"
+import Link from "next/link";
+import React from "react";
+import styled from "styled-components";
 
 const Footer = () => {
   return (
     <Wrapper>
       <Container>
         <Links>
-          <Link to="/">Privacy statement</Link>
-          <Link to="/">Terms of service</Link>
-          <Link to="/">Careers</Link>
-          <Link to="/">Privacy Statement</Link>
+          <Link href="/">
+            <a>Privacy statement</a>
+          </Link>
+          <Link href="/">
+            <a>Terms of service</a>
+          </Link>
+          <Link href="/">
+            <a>Careers</a>
+          </Link>
+          <Link href="/">
+            <a>Privacy Statement</a>
+          </Link>
         </Links>
         <span>Copyright © 2022 Vidbox</span>
       </Container>
     </Wrapper>
-  )
-}
+  );
+};
 
-export default Footer
+export default Footer;
 
 const Wrapper = styled.footer`
   margin-top: 10rem;
@@ -34,7 +40,7 @@ const Wrapper = styled.footer`
     height: auto;
     padding: 3rem 0;
   }
-`
+`;
 
 const Container = styled.div`
   flex-grow: 1;
@@ -59,7 +65,7 @@ const Container = styled.div`
   @media only screen and (max-width: 1340px) {
     flex-direction: column;
   }
-`
+`;
 
 const Links = styled.div`
   display: flex;
@@ -87,7 +93,7 @@ const Links = styled.div`
       margin-bottom: 2rem;
     }
   }
-`
+`;
 
 const SocialMedia = styled.div`
   display: flex;
@@ -98,4 +104,4 @@ const SocialMedia = styled.div`
   @media only screen and (max-width: 1340px) {
     margin-top: 2rem;
   }
-`
+`;

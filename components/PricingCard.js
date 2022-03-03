@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
 const PricingCard = ({ name, level, price, features }) => {
   return (
@@ -12,7 +12,7 @@ const PricingCard = ({ name, level, price, features }) => {
       <span className="pricing__tag">What is included</span>
       <ul>
         {features.map(feat => (
-          <li>
+          <li key={feat}>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 20 20"
@@ -31,10 +31,10 @@ const PricingCard = ({ name, level, price, features }) => {
       <button>Request a Demo</button>
       <small>(no credit card require)</small>
     </Container>
-  )
-}
+  );
+};
 
-export default PricingCard
+export default PricingCard;
 
 const Container = styled.div`
   user-select: none;
@@ -122,4 +122,4 @@ const Container = styled.div`
   @media only screen and (max-width: 1340px) {
     width: auto;
   }
-`
+`;

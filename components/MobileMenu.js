@@ -1,28 +1,38 @@
-import React from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
+import React from "react";
+import styled from "styled-components";
+import Link from "next/link";
 
 const MobileMenu = () => {
   return (
     <Container>
       <Menu>
-        <Link to="/">Features</Link>
-        <Link to="/">Pricing</Link>
-        <Link to="/">Contact us</Link>
+        <Link href="/">
+          <a>Features</a>
+        </Link>
+        <Link href="/">
+          <a>Pricing</a>
+        </Link>
+        <Link href="/">
+          <a>Contact us</a>
+        </Link>
       </Menu>
       <Buttons>
         <span className="navbar-container__loginbtn">
-          <Link to="/">Login</Link>
+          <Link href="/">
+            <a>Login</a>
+          </Link>
         </span>
         <span className="navbar-container__demobtn">
-          <Link to="/">Request a Demo</Link>
+          <Link href="/">
+            <a>Request a Demo</a>
+          </Link>
         </span>
       </Buttons>
     </Container>
-  )
-}
+  );
+};
 
-export default MobileMenu
+export default MobileMenu;
 
 const Container = styled.div`
   display: flex;
@@ -34,7 +44,7 @@ const Container = styled.div`
   left: 0;
   background: #0e0e12;
   z-index: 1;
-`
+`;
 const Menu = styled.div`
   display: flex;
   flex-direction: column;
@@ -51,7 +61,7 @@ const Menu = styled.div`
       color: var(--white);
     }
   }
-`
+`;
 
 const Buttons = styled.div`
   padding: 0 2.4rem;
@@ -100,4 +110,4 @@ const Buttons = styled.div`
       background: var(--purple-hover);
     }
   }
-`
+`;

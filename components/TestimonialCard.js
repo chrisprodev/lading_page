@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
 const TestimonialCard = ({ user, account, body, date }) => {
   return (
@@ -14,10 +14,10 @@ const TestimonialCard = ({ user, account, body, date }) => {
       <p>{body}</p>
       <span className="card__datetime">{date}</span>
     </Card>
-  )
-}
+  );
+};
 
-export default TestimonialCard
+export default TestimonialCard;
 
 const Card = styled.div`
   display: inline-block;
@@ -40,11 +40,11 @@ const Card = styled.div`
     margin-top: 3rem;
     font-size: 1.6rem;
   }
-`
+`;
 
 const CardHeader = styled.div`
   display: flex;
-`
+`;
 const UserDetails = styled.div`
   display: flex;
   flex-direction: column;
@@ -59,4 +59,4 @@ const UserDetails = styled.div`
     font-size: 1.6rem;
     margin-top: 0.5rem;
   }
-`
+`;

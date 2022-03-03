@@ -1,8 +1,8 @@
-import React, { useState } from "react"
-import styled from "styled-components"
+import React, { useState } from "react";
+import styled from "styled-components";
 
 const Faq = ({ title, content, initialState }) => {
-  const [open, setOpen] = useState(initialState ? true : false)
+  const [open, setOpen] = useState(initialState ? true : false);
 
   return (
     <Container open={open}>
@@ -27,29 +27,28 @@ const Faq = ({ title, content, initialState }) => {
                 transform="translate(952 4156)"
                 fill="none"
                 stroke="currentColor"
-                stroke-linecap="round"
-                stroke-width="4"
+                strokeLinecap="round"
+                strokeWidth="4"
               />
             )}
             <line
               id="line_2"
-              data-name="Line 2"
               y2="20"
               transform="translate(962 4166) rotate(90)"
               fill="none"
               stroke="currentColor"
-              stroke-linecap="round"
-              stroke-width="4"
+              strokeLinecap="round"
+              strokeWidth="4"
             />
           </g>
         </svg>
       </Header>
       {open && <Content>{content}</Content>}
     </Container>
-  )
-}
+  );
+};
 
-export default Faq
+export default Faq;
 
 const Container = styled.div`
   user-select: none;
@@ -74,7 +73,7 @@ const Container = styled.div`
       background: unset;
     }
   }
-`
+`;
 
 const Header = styled.div`
   display: flex;
@@ -102,9 +101,9 @@ const Header = styled.div`
       max-width: 80%;
     }
   }
-`
+`;
 
 const Content = styled.p`
   margin-top: 1.6rem;
   font-size: 1.8rem;
-`
+`;

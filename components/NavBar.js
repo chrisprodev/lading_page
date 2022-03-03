@@ -1,25 +1,25 @@
-import React, { useState, useEffect } from "react"
-import { Link } from "gatsby"
-import styled from "styled-components"
+import React, { useState, useEffect } from "react";
+import Link from "next/link";
+import styled from "styled-components";
 
 const NavBar = ({ menu, onOpenMobileMenu }) => {
-  const [show, setShow] = useState(false)
-  const [animation, setAnimation] = useState(false)
+  const [show, setShow] = useState(false);
+  const [animation, setAnimation] = useState(false);
 
   useEffect(() => {
-    window.scrollTo(0, 0)
+    window.scrollTo(0, 0);
     if (window.document.location.pathname === "/") {
-      setAnimation(true)
-      window.addEventListener("scroll", handleScroll)
-      return () => window.removeEventListener("scroll", handleScroll)
+      setAnimation(true);
+      window.addEventListener("scroll", handleScroll);
+      return () => window.removeEventListener("scroll", handleScroll);
     } else {
-      setShow(true)
+      setShow(true);
     }
-  }, [])
+  }, []);
 
   const handleScroll = () => {
-    setShow(window.pageYOffset > 80)
-  }
+    setShow(window.pageYOffset > 80);
+  };
 
   return (
     <MainContainer animation={animation} bg={show}>
@@ -33,17 +33,27 @@ const NavBar = ({ menu, onOpenMobileMenu }) => {
             height={36}
           />
           <Menu>
-            <Link to="/">Features</Link>
-            <Link to="/">Pricing</Link>
-            <Link to="/">Contact us</Link>
+            <Link href="/">
+              <a>Features</a>
+            </Link>
+            <Link href="/">
+              <a>Pricing</a>
+            </Link>
+            <Link href="/">
+              <a>Contact us</a>
+            </Link>
           </Menu>
         </BlockOne>
         <BlockTwo>
           <span className="navbar-container__loginbtn">
-            <Link to="/">Login</Link>
+            <Link href="/">
+              <a>Login</a>
+            </Link>
           </span>
           <span className="navbar-container__demobtn">
-            <Link to="/">Request a Demo</Link>
+            <Link href="/">
+              <a>Request a Demo</a>
+            </Link>
           </span>
         </BlockTwo>
         <Hamburguer onClick={onOpenMobileMenu} menu={menu}>
@@ -52,10 +62,10 @@ const NavBar = ({ menu, onOpenMobileMenu }) => {
         </Hamburguer>
       </Container>
     </MainContainer>
-  )
-}
+  );
+};
 
-export default NavBar
+export default NavBar;
 
 const MainContainer = styled.nav`
   position: fixed;
@@ -66,7 +76,7 @@ const MainContainer = styled.nav`
   padding: 0rem 2rem;
   transition: all 450ms ease;
   background-color: ${({ bg }) => (bg ? "var(--dark-gray)" : "transparent")};
-`
+`;
 
 const Container = styled.div`
   display: flex;
@@ -78,7 +88,7 @@ const Container = styled.div`
   margin-left: auto;
   margin-right: auto;
   margin-bottom: 2rem;
-`
+`;
 const BlockOne = styled.div`
   display: flex;
   align-items: center;
@@ -87,7 +97,7 @@ const BlockOne = styled.div`
     width: 14rem;
     height: 3.6rem;
   }
-`
+`;
 
 const BlockTwo = styled.div`
   display: flex;
@@ -138,7 +148,7 @@ const BlockTwo = styled.div`
   @media only screen and (max-width: 1340px) {
     display: none;
   }
-`
+`;
 
 const Menu = styled.div`
   a {
@@ -154,7 +164,7 @@ const Menu = styled.div`
   @media only screen and (max-width: 1340px) {
     display: none;
   }
-`
+`;
 
 const Hamburguer = styled.div`
   display: none;
@@ -184,4 +194,4 @@ const Hamburguer = styled.div`
   span:last-child {
     transform: ${({ menu }) => (menu ? "rotate(-45deg)" : "rotate(0)")};
   }
-`
+`;

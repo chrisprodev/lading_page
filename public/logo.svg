@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="142.437" height="36" viewBox="0 0 142.437 36">
+  <g id="logo" transform="translate(0 3.992)">
+    <g id="Layer_2" data-name="Layer 2" transform="translate(0 -3.52)">
+      <path id="Path_1" data-name="Path 1" d="M83.257,12.84l3.669-6.353L83.257.13H75.919L72.25,6.486l3.669,6.353Z" transform="translate(-50.16 0.986)" fill="#fff"/>
+      <path id="Path_2" data-name="Path 2" d="M71.2,33.723l3.669-6.356L71.2,21.01H63.859L60.19,27.366l3.669,6.356Z" transform="translate(-41.788 -13.51)" fill="#fff"/>
+      <path id="Path_3" data-name="Path 3" d="M59.14,54.6l3.669-6.356L59.14,41.89H51.8L48.13,48.246,51.8,54.6Z" transform="translate(-33.415 -28.006)" fill="#fff"/>
+      <path id="Path_4" data-name="Path 4" d="M47.087,75.49l3.669-6.356L47.087,62.78H39.749L36.08,69.133l3.669,6.356Z" transform="translate(-25.049 -42.509)" fill="#fff"/>
+      <path id="Path_5" data-name="Path 5" d="M59.131,0,48.06,19.148l3.693,6.372L66.472.034Z" transform="translate(-33.366 1.076)" fill="#fff" opacity="0.5"/>
+      <path id="Path_6" data-name="Path 6" d="M35.12,41.94,38.789,48.3,35.12,54.65H27.779L24.11,48.3l3.669-6.356Z" transform="translate(-16.739 -28.041)" fill="#fff"/>
+      <path id="Path_7" data-name="Path 7" d="M23.067,21.06l3.669,6.353L23.067,33.77H15.729L12.06,27.413l3.669-6.353Z" transform="translate(-8.373 -13.545)" fill="#fff"/>
+      <path id="Path_8" data-name="Path 8" d="M11.007.18l3.669,6.353L11.007,12.89H3.669L0,6.533,3.669.18Z" transform="translate(0 0.951)" fill="#fff"/>
+      <path id="Path_9" data-name="Path 9" d="M0,20.425l14.7,25.5h7.338L7.215,20.19Z" transform="translate(0 -12.941)" fill="#fff" opacity="0.8"/>
+      <path id="Path_10" data-name="Path 10" d="M3.669.18h7.338L7.215,6.3,0,6.533Z" transform="translate(0 0.951)" fill="#fff" opacity="0.5"/>
+      <text id="Vidbox" transform="translate(47.437 28.528)" fill="#fff" font-size="30" font-family="SFProDisplay-Bold, SF Pro Display" font-weight="700"><tspan x="0" y="0">Vidb</tspan><tspan y="0" letter-spacing="-0.03em">o</tspan><tspan y="0">x</tspan></text>
+    </g>
+  </g>
+</svg>

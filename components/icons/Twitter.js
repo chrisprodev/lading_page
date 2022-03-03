@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
 function Twitter() {
   return (
@@ -13,10 +13,10 @@ function Twitter() {
 	C59.1,12.8,61,10.8,62.5,8.6z"
       />
     </Svg>
-  )
+  );
 }
 
-export default Twitter
+export default Twitter;
 
 const Svg = styled.svg`
   cursor: pointer;
@@ -30,4 +30,4 @@ const Svg = styled.svg`
       fill: var(--white);
     }
   }
-`
+`;

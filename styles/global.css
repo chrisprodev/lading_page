@@ -33,7 +33,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-a{
+a {
   text-decoration: none;
   color: inherit;
   font-weight: 500;
@@ -85,7 +85,5 @@ p {
   p {
     font-size: 2rem;
     line-height: 3.2rem;
-  }
-
-  
+  }  
 }

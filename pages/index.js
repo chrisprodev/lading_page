@@ -1,23 +1,22 @@
-import React, { useState } from "react"
-import styled from "styled-components"
-import { Link } from "gatsby"
-import TestimonialCard from "../components/TestimonialCard"
-import PricingCard from "../components/PricingCard"
-import MobileMenu from "../components/MobileMenu"
-import NavBar from "../components/NavBar"
-import Footer from "../components/Footer"
-import Faq from "../components/Faq"
+import { useState, Fragment } from "react";
+import styled from "styled-components";
+import Link from "next/link";
+import TestimonialCard from "../components/TestimonialCard";
+import PricingCard from "../components/PricingCard";
+import MobileMenu from "../components/MobileMenu";
+import NavBar from "../components/NavBar";
+import Footer from "../components/Footer";
+import Faq from "../components/Faq";
 import {
   faqs,
   features,
   logosData,
   pricingTable,
   testimonials,
-} from "../constants/data"
-import "../global.css"
+} from "../constants/data";
 
-export default function Home() {
-  const [menu, showMenu] = useState(false)
+const Home = () => {
+  const [menu, showMenu] = useState(false);
 
   return (
     <>
@@ -32,7 +31,9 @@ export default function Home() {
                 <h1>Explainer videos made simple</h1>
                 <p>Scale your business with unlimited video editing.</p>
                 <span className="header__btn">
-                  <Link to="/">Get Started</Link>
+                  <Link href="/">
+                    <a>Get Started</a>
+                  </Link>
                 </span>
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -49,8 +50,8 @@ export default function Home() {
                       gradientTransform="matrix(-0.016, 1, -0.571, -0.009, 0.983, -0.967)"
                       gradientUnits="objectBoundingBox"
                     >
-                      <stop offset="0" stop-color="#fff" />
-                      <stop offset="1" stop-color="#fff" />
+                      <stop offset="0" stopColor="#fff" />
+                      <stop offset="1" stopColor="#fff" />
                     </radialGradient>
                   </defs>
                   <rect
@@ -73,7 +74,7 @@ export default function Home() {
             <FeatureWrapper>
               <Features>
                 {features.map(feature => (
-                  <>
+                  <Fragment key={feature.mainTitle}>
                     <Feature bg={feature.color}>
                       <VideoContainer bg={feature.color}></VideoContainer>
                       <div className="feature__main-feature">
@@ -85,14 +86,17 @@ export default function Home() {
                     </Feature>
                     <MiniFeatures>
                       {feature.subFeats.map(subFeat => (
-                        <div className="mini-features__description">
+                        <div
+                          className="mini-features__description"
+                          key={subFeat.title}
+                        >
                           {subFeat.icon && subFeat.icon}
                           <h4>{subFeat.title}</h4>
                           <p>{subFeat.desc}</p>
                         </div>
                       ))}
                     </MiniFeatures>
-                  </>
+                  </Fragment>
                 ))}
               </Features>
             </FeatureWrapper>
@@ -102,7 +106,7 @@ export default function Home() {
                 <p>No hiden fees.</p>
                 <PricingWrapper>
                   {pricingTable.map(card => (
-                    <PricingCard {...card} />
+                    <PricingCard {...card} key={card.name} />
                   ))}
                 </PricingWrapper>
               </PricingContentWrapper>
@@ -117,6 +121,7 @@ export default function Home() {
                 <TestimonialsGrid>
                   {testimonials.map(element => (
                     <TestimonialCard
+                      key={element.user}
                       user={element.user}
                       account={element.account}
                       body={element.description}
@@ -130,6 +135,7 @@ export default function Home() {
               <h2>Frequently asked questions</h2>
               {faqs.map(question => (
                 <Faq
+                  key={question.title}
                   title={question.title}
                   content={question.content}
                   initialState={question.initialState}
@@ -141,10 +147,12 @@ export default function Home() {
         </>
       )}
     </>
-  )
-}
+  );
+};
 
-const Container = styled.main``
+export default Home;
+
+const Container = styled.main``;
 
 const Header = styled.header`
   padding: 16rem 0;
@@ -153,7 +161,7 @@ const Header = styled.header`
   @media only screen and (max-width: 1340px) {
     padding: 16rem 3rem 8rem 3rem;
   }
-`
+`;
 
 const ContentWrapper = styled.div`
   display: flex;
@@ -209,7 +217,7 @@ const ContentWrapper = styled.div`
       margin-top: 1.4rem;
     }
   }
-`
+`;
 
 const Logos = styled.section`
   display: flex;
@@ -261,13 +269,13 @@ const Logos = styled.section`
       }
     }
   }
-`
+`;
 
 const FeatureWrapper = styled.section`
   @media only screen and (max-width: 1340px) {
     padding: 16rem 3rem 8rem 3rem;
   }
-`
+`;
 
 const Features = styled.div`
   display: flex;
@@ -277,7 +285,7 @@ const Features = styled.div`
   max-width: 138rem;
   margin-left: auto;
   margin-right: auto;
-`
+`;
 const Feature = styled.div`
   display: flex;
   background: ${({ bg }) =>
@@ -322,7 +330,7 @@ const Feature = styled.div`
       }
     }
   }
-`
+`;
 
 const VideoContainer = styled.span`
   width: 50%;
@@ -336,7 +344,7 @@ const VideoContainer = styled.span`
     border-radius: 2rem 2rem 0 0;
     height: 25rem;
   }
-`
+`;
 
 const MiniFeatures = styled.div`
   display: flex;
@@ -370,7 +378,7 @@ const MiniFeatures = styled.div`
       max-width: unset;
     }
   }
-`
+`;
 
 const Pricing = styled.section`
   padding: 10rem 0;
@@ -379,7 +387,7 @@ const Pricing = styled.section`
   @media only screen and (max-width: 1340px) {
     padding: 8rem 3rem;
   }
-`
+`;
 
 const PricingContentWrapper = styled.div`
   display: flex;
@@ -405,7 +413,7 @@ const PricingContentWrapper = styled.div`
       text-align: center;
     }
   }
-`
+`;
 
 const PricingWrapper = styled.div`
   display: flex;
@@ -417,7 +425,7 @@ const PricingWrapper = styled.div`
     flex-direction: column;
     width: 90%;
   }
-`
+`;
 
 const Testimonials = styled.section`
   padding: 10rem 0;
@@ -426,7 +434,7 @@ const Testimonials = styled.section`
   @media only screen and (max-width: 1340px) {
     padding: 8rem 3rem;
   }
-`
+`;
 
 const TestimonialsWrapper = styled.div`
   display: flex;
@@ -451,7 +459,7 @@ const TestimonialsWrapper = styled.div`
     font-size: 1.6rem;
     color: var(--white);
   }
-`
+`;
 
 const TestimonialsGrid = styled.div`
   margin-top: 5rem;
@@ -466,7 +474,7 @@ const TestimonialsGrid = styled.div`
       display: none;
     }
   }
-`
+`;
 
 const FAQs = styled.section`
   display: flex;
@@ -487,4 +495,4 @@ const FAQs = styled.section`
       text-align: center;
     }
   }
-`
+`;

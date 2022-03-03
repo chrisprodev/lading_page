@@ -1,5 +1,5 @@
-import React from "react"
-import styled from "styled-components"
+import React from "react";
+import styled from "styled-components";
 
 function Linkedin() {
   return (
@@ -26,10 +26,10 @@ function Linkedin() {
         </g>
       </g>
     </Svg>
-  )
+  );
 }
 
-export default Linkedin
+export default Linkedin;
 
 const Svg = styled.svg`
   cursor: pointer;
@@ -43,4 +43,4 @@ const Svg = styled.svg`
       fill: var(--white);
     }
   }
-`
+`;
