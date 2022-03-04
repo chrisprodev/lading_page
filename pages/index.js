@@ -1,6 +1,7 @@
 import { useState, Fragment } from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import Image from "next/image";
 import TestimonialCard from "../components/TestimonialCard";
 import PricingCard from "../components/PricingCard";
 import MobileMenu from "../components/MobileMenu";
@@ -14,6 +15,7 @@ import {
   pricingTable,
   testimonials,
 } from "../constants/data";
+import banner_01 from "../public/banner_01@2x.png";
 
 const Home = () => {
   const [menu, showMenu] = useState(false);
@@ -76,7 +78,17 @@ const Home = () => {
                 {features.map(feature => (
                   <Fragment key={feature.mainTitle}>
                     <Feature bg={feature.color}>
-                      <VideoContainer bg={feature.color}></VideoContainer>
+                      <VideoContainer bg={feature.color}>
+                        <div className="image-holder">
+                          <Image
+                            src={banner_01}
+                            alt={feature.mainTitle}
+                            layout="responsive"
+                            width={800}
+                            height={1098}
+                          />
+                        </div>
+                      </VideoContainer>
                       <div className="feature__main-feature">
                         <h2>{feature.mainTitle}</h2>
                         <p className="main-feature__description">
@@ -320,13 +332,10 @@ const Feature = styled.div`
     .feature__main-feature {
       width: 100%;
       max-width: 32rem;
+      padding: 4rem 0;
 
       p {
         margin-bottom: 2.4rem;
-      }
-
-      .main-feature__description {
-        margin-bottom: 5rem;
       }
     }
   }
@@ -334,15 +343,25 @@ const Feature = styled.div`
 
 const VideoContainer = styled.span`
   width: 50%;
-  height: 65rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2rem 0 0 2rem;
   background: ${({ bg }) =>
     bg === "orange" ? "var(--yellow)" : "var(--blue)"};
-  border-radius: 2rem 0 0 2rem;
+
+  .image-holder {
+    padding: 8rem;
+    width: 50%;
+  }
 
   @media only screen and (max-width: 1340px) {
     width: 100%;
     border-radius: 2rem 2rem 0 0;
-    height: 25rem;
+
+    .image-holder {
+      padding: 6rem;
+    }
   }
 `;
 
