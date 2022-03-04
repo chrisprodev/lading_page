@@ -42,7 +42,7 @@ const Container = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  background: #0e0e12;
+  background: var(--blue);
   z-index: 1;
 `;
 const Menu = styled.div`
@@ -54,7 +54,7 @@ const Menu = styled.div`
   margin-left: 2.4rem;
 
   a {
-    color: var(--gray);
+    color: var(--opacity-7);
     font-size: 2.6rem;
     transition: color 150ms ease;
     :hover {
@@ -67,47 +67,45 @@ const Buttons = styled.div`
   padding: 0 2.4rem;
 
   .navbar-container__loginbtn {
-    margin-top: 3.2rem;
-    flex-grow: 1;
+    display: block;
+    margin-top: 2.2rem;
     cursor: pointer;
-    height: 4.4rem;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    border-radius: 4rem;
-    outline: solid 2px var(--purple);
-    margin-right: 2rem;
     transition: all 150ms ease;
 
     a {
-      color: var(--white);
-      font-size: 1.6rem;
+      color: var(--opacity-7);
+      font-size: 2.6rem;
+      transition: color 150ms ease;
     }
 
     :hover {
-      background: var(--purple);
+      a {
+        color: var(--white);
+      }
     }
   }
 
   .navbar-container__demobtn {
-    margin-top: 2.4em;
+    cursor: pointer;
+    margin-top: 2.8rem;
     flex-grow: 1;
-    height: 4.4rem;
+    height: 5.4rem;
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 4rem;
+    border-radius: 1rem;
     border: none;
-    background: var(--purple);
+    background: #fff;
     transition: all 150ms ease;
 
     a {
-      color: var(--white);
+      color: var(--black);
+      font-weight: 500;
       font-size: 1.6rem;
     }
 
     :hover {
-      background: var(--purple-hover);
+      background: var(--opacity-7);
     }
   }
 `;

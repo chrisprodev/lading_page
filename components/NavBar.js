@@ -180,11 +180,11 @@ const Hamburguer = styled.div`
 
   span {
     width: 2.8rem;
-    height: 0.2rem;
+    height: 0.4rem;
     background: var(--white);
     border-radius: 0.3rem;
     transition: all 200ms ease;
-    transform-origin: 15% center;
+    transform-origin: 18% center;
   }
 
   span:first-child {
