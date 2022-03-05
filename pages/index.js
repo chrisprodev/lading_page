@@ -16,6 +16,7 @@ import {
   testimonials,
 } from "../constants/data";
 import banner_01 from "../public/banner_01@2x.png";
+import banner_02 from "../public/banner_02@2x.png";
 
 const Home = () => {
   const [menu, showMenu] = useState(false);
@@ -81,11 +82,15 @@ const Home = () => {
                       <VideoContainer bg={feature.color}>
                         <div className="image-holder">
                           <Image
-                            src={banner_01}
+                            src={
+                              feature.image === "banner_01"
+                                ? banner_01
+                                : banner_02
+                            }
                             alt={feature.mainTitle}
                             layout="responsive"
-                            width={800}
-                            height={1098}
+                            width={feature.width}
+                            height={feature.height}
                           />
                         </div>
                       </VideoContainer>
@@ -352,7 +357,7 @@ const VideoContainer = styled.span`
 
   .image-holder {
     padding: 8rem;
-    width: 50%;
+    width: 70%;
   }
 
   @media only screen and (max-width: 1340px) {
@@ -376,7 +381,7 @@ const MiniFeatures = styled.div`
     max-width: 28rem;
 
     svg {
-      height: 5rem;
+      height: 8rem;
       margin-bottom: 3rem;
     }
 

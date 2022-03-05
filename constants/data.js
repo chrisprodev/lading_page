@@ -66,6 +66,9 @@ export const logosData = [
 
 export const features = [
   {
+    image: "banner_01",
+    width: 914,
+    height: 1138,
     color: "orange",
     mainTitle: "The Ultimate Creative Solution",
     mainDesc:
@@ -75,20 +78,41 @@ export const features = [
         icon: (
           <svg
             id="Layer_1"
-            data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 81.52 81.52"
+            viewBox="0 0 127.67 127.67"
           >
-            <circle
-              cx="40.76"
-              cy="40.76"
-              r="40.76"
+            <g style={{ opacity: "0.15" }}>
+              <circle
+                cx="63.83"
+                cy="63.83"
+                r="63.83"
+                style={{ fill: "#f8a438" }}
+              />
+            </g>
+            <g style={{ opacity: "0.4" }}>
+              <circle
+                cx="64.38"
+                cy="63.87"
+                r="35.52"
+                style={{ fill: "#f8a438" }}
+              />
+            </g>
+            <path
+              d="M77.34,71.74a11.84,11.84,0,0,1-23.67,0"
+              transform="translate(-1.12 -1.22)"
               style={{ fill: "#f8a438" }}
             />
-            <path
-              d="M50.23,77a27,27,0,0,0,27-27H23.26A27,27,0,0,0,50.23,77Z"
-              transform="translate(-9.47 -9.3)"
-              style={{ fill: "#ffda54" }}
+            <circle
+              cx="52.47"
+              cy="53.13"
+              r="3.72"
+              style={{ fill: "#f8a438" }}
+            />
+            <circle
+              cx="74.26"
+              cy="53.13"
+              r="3.72"
+              style={{ fill: "#f8a438" }}
             />
           </svg>
         ),
@@ -99,97 +123,113 @@ export const features = [
         icon: (
           <svg
             id="Layer_1"
-            data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 67.14 81.52"
+            viewBox="0 0 127.67 127.67"
           >
-            <rect width="67.14" height="81.52" style={{ fill: "#09f" }} />
+            <g style={{ opacity: "0.15" }}>
+              <circle
+                cx="63.83"
+                cy="63.83"
+                r="63.83"
+                style={{ fill: "#09f" }}
+              />
+            </g>
+            <g style={{ opacity: "0.3" }}>
+              <rect
+                x="34.82"
+                y="28.35"
+                width="58.52"
+                height="71.05"
+                rx="3"
+                style={{ fill: "#09f" }}
+              />
+            </g>
             <line
-              x1="7.73"
-              y1="8.7"
-              x2="39.75"
-              y2="8.7"
+              x1="41.55"
+              y1="35.93"
+              x2="69.46"
+              y2="35.93"
               style={{
                 fill: "none",
-                stroke: "#1a49ba",
+                stroke: "#09f",
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
                 strokeWidth: "3px",
               }}
             />
             <line
-              x1="7.73"
-              y1="16.7"
-              x2="58.75"
-              y2="16.7"
+              x1="41.55"
+              y1="42.91"
+              x2="86.02"
+              y2="42.91"
               style={{
                 fill: "none",
-                stroke: "#1a49ba",
+                stroke: "#09f",
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
                 strokeWidth: "3px",
               }}
             />
             <line
-              x1="7.73"
-              y1="24.7"
-              x2="58.75"
-              y2="24.7"
+              x1="41.55"
+              y1="49.88"
+              x2="86.02"
+              y2="49.88"
               style={{
                 fill: "none",
-                stroke: "#1a49ba",
+                stroke: "#09f",
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
                 strokeWidth: "3px",
               }}
             />
             <line
-              x1="7.73"
-              y1="32.7"
-              x2="58.75"
-              y2="32.7"
+              x1="41.55"
+              y1="56.85"
+              x2="86.02"
+              y2="56.85"
               style={{
                 fill: "none",
-                stroke: "#1a49ba",
+                stroke: "#09f",
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
                 strokeWidth: "3px",
               }}
             />
             <line
-              x1="7.73"
-              y1="40.7"
-              x2="58.75"
-              y2="40.7"
+              x1="41.55"
+              y1="63.82"
+              x2="86.02"
+              y2="63.82"
               style={{
                 fill: "none",
-                stroke: "#1a49ba",
+                stroke: "#09f",
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
                 strokeWidth: "3px",
               }}
             />
             <line
-              x1="7.73"
-              y1="48.7"
-              x2="58.75"
-              y2="48.7"
+              x1="41.55"
+              y1="70.8"
+              x2="86.02"
+              y2="70.8"
               style={{
                 fill: "none",
-                stroke: "#1a49ba",
+                stroke: "#09f",
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
                 strokeWidth: "3px",
               }}
             />
             <line
-              x1="7.73"
-              y1="56.7"
-              x2="28.75"
-              y2="56.7"
+              x1="41.55"
+              y1="77.77"
+              x2="59.88"
+              y2="77.77"
               style={{
                 fill: "none",
-                stroke: "#1a49ba",
+                stroke: "#09f",
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
                 strokeWidth: "3px",
@@ -204,61 +244,71 @@ export const features = [
         icon: (
           <svg
             id="Layer_1"
-            data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 81.37 80.43"
+            viewBox="0 0 127.67 127.67"
           >
-            <polygon
-              points="81.37 0 0 0 0 65.87 46.11 65.87 46.11 80.43 60.66 65.87 81.37 65.87 81.37 0"
-              style={{ fill: "#02c970" }}
-            />
+            <g style={{ opacity: "0.07" }}>
+              <circle
+                cx="63.83"
+                cy="63.83"
+                r="63.83"
+                style={{ fill: "#1e2432" }}
+              />
+            </g>
+            <g style={{ opacity: "0.3" }}>
+              <path
+                d="M98.88,40.14H32.35a3,3,0,0,0-3,3V83.85a3,3,0,0,0,3,3h35.1a3,3,0,0,1,3,3v2.74a3,3,0,0,0,5.12,2.12l7-7a3,3,0,0,1,2.12-.88H98.88a3,3,0,0,0,3-3V43.14A3,3,0,0,0,98.88,40.14Z"
+                transform="translate(-1.21 -1.66)"
+                style={{ fill: "#1e2432" }}
+              />
+            </g>
             <line
-              x1="8.09"
-              y1="31.28"
-              x2="73.47"
-              y2="31.28"
+              x1="35.35"
+              y1="54.37"
+              x2="93.62"
+              y2="54.37"
               style={{
                 fill: "none",
-                stroke: "#ffda54",
+                stroke: "#6e7177",
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
                 strokeWidth: "3px",
               }}
             />
             <line
-              x1="8.09"
-              y1="39.35"
-              x2="73.47"
-              y2="39.35"
+              x1="35.35"
+              y1="61.56"
+              x2="93.62"
+              y2="61.56"
               style={{
                 fill: "none",
-                stroke: "#ffda54",
+                stroke: "#6e7177",
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
                 strokeWidth: "3px",
               }}
             />
             <line
-              x1="8.09"
-              y1="47.42"
-              x2="73.47"
-              y2="47.42"
+              x1="35.35"
+              y1="68.76"
+              x2="93.62"
+              y2="68.76"
               style={{
                 fill: "none",
-                stroke: "#ffda54",
+                stroke: "#6e7177",
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
                 strokeWidth: "3px",
               }}
             />
             <line
-              x1="8.09"
-              y1="55.5"
-              x2="34.9"
-              y2="55.5"
+              x1="35.35"
+              y1="75.95"
+              x2="59.24"
+              y2="75.95"
               style={{
                 fill: "none",
-                stroke: "#ffda54",
+                stroke: "#6e7177",
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
                 strokeWidth: "3px",
@@ -273,48 +323,54 @@ export const features = [
         icon: (
           <svg
             id="Layer_1"
-            data-name="Layer 1"
             xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 74.1 66.3"
+            viewBox="0 0 127.67 127.67"
           >
+            <circle
+              cx="63.83"
+              cy="63.83"
+              r="63.83"
+              style={{ fill: "#f4d150", opacity: "0.15" }}
+            />
             <rect
-              y="21.5"
+              x="27.58"
+              y="52.17"
               width="11.78"
               height="23.3"
-              style={{ fill: "#1a49ba" }}
+              style={{ fill: "#f4d150" }}
             />
             <polygon
-              points="11.78 44.8 33.28 64.8 33.28 1.5 11.78 21.5 11.78 44.8"
-              style={{ fill: "#09f" }}
+              points="39.36 75.47 60.85 95.47 60.85 32.17 39.36 52.17 39.36 75.47"
+              style={{ fill: "#f4d150" }}
             />
             <path
-              d="M55,35a15,15,0,1,1,0,30"
-              transform="translate(-13.7 -16.85)"
+              d="M70.07,50.47a15,15,0,0,1,0,30"
+              transform="translate(-1.21 -1.66)"
               style={{
                 fill: "none",
-                stroke: "#1a49ba",
+                stroke: "#f4d150",
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
                 strokeWidth: "3px",
               }}
             />
             <path
-              d="M54.75,26.56a23.44,23.44,0,1,1,0,46.88"
-              transform="translate(-13.7 -16.85)"
+              d="M69.85,42a23.44,23.44,0,1,1,0,46.88"
+              transform="translate(-1.21 -1.66)"
               style={{
                 fill: "none",
-                stroke: "#1a49ba",
+                stroke: "#f4d150",
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
                 strokeWidth: "3px",
               }}
             />
             <path
-              d="M54.65,18.35a31.65,31.65,0,0,1,0,63.3"
-              transform="translate(-13.7 -16.85)"
+              d="M69.74,33.82a31.65,31.65,0,1,1,0,63.3"
+              transform="translate(-1.21 -1.66)"
               style={{
                 fill: "none",
-                stroke: "#1a49ba",
+                stroke: "#f4d150",
                 strokeLinecap: "round",
                 strokeLinejoin: "round",
                 strokeWidth: "3px",
@@ -328,28 +384,174 @@ export const features = [
     ],
   },
   {
+    image: "banner_02",
+    width: 906,
+    height: 1042,
     color: "blue",
     mainTitle: "Market your products",
     mainDesc:
       "Position your marketing team for rapid growth. Whether you have a video editor on staff who needs support or you are handling the creative on your own.",
     subFeats: [
       {
-        icon: "",
+        icon: (
+          <svg
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 127.67 127.67"
+          >
+            <circle
+              cx="63.83"
+              cy="63.83"
+              r="63.83"
+              style={{ fill: "#fe585a", opacity: "0.15" }}
+            />
+            <rect
+              x="32.91"
+              y="35.23"
+              width="61.79"
+              height="58.99"
+              style={{ fill: "#fe585a", opacity: "0.3" }}
+            />
+            <rect
+              x="32.91"
+              y="35.23"
+              width="61.79"
+              height="17.87"
+              style={{ fill: "#fe585a" }}
+            />
+            <path
+              d="M59.21,80.36l6.29-5.89a18.23,18.23,0,0,0,1.74-1.79,4.44,4.44,0,0,0,.81-1.28,3.08,3.08,0,0,0,.22-1.17v0a2.43,2.43,0,0,0-.35-1.3A2.37,2.37,0,0,0,67,68a2.86,2.86,0,0,0-1.39-.33,3.33,3.33,0,0,0-1.61.38,2.77,2.77,0,0,0-1.51,2.43v.11H59v-.1a5.25,5.25,0,0,1,.85-3,5.78,5.78,0,0,1,2.34-2,7.61,7.61,0,0,1,3.36-.73,7.84,7.84,0,0,1,3.32.67,5.44,5.44,0,0,1,2.24,1.83,4.68,4.68,0,0,1,.8,2.69v0a5.07,5.07,0,0,1-.39,2A7.34,7.34,0,0,1,70.24,74a30.37,30.37,0,0,1-2.43,2.45l-5.16,4.7,1.43-2.5v2.5L62.66,80h9.5v3H59.21Z"
+              transform="translate(-1.21 -1.66)"
+              style={{ fill: "#fe585a" }}
+            />
+          </svg>
+        ),
         title: "Deliverables in Days",
         desc: "Designers ensures that you do not miss opportunities by delivering created by professional video editors.",
       },
       {
-        icon: "",
+        icon: (
+          <svg
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 127.67 127.67"
+          >
+            <g style={{ opacity: "0.15" }}>
+              <circle
+                cx="63.83"
+                cy="63.83"
+                r="63.83"
+                style={{ fill: "#09f" }}
+              />
+            </g>
+            <g style={{ opacity: "0.15" }}>
+              <circle cx="64.05" cy="63.9" r="36.97" style={{ fill: "#09f" }} />
+            </g>
+            <g style={{ opacity: "0.15" }}>
+              <circle cx="64.05" cy="63.9" r="32.39" style={{ fill: "#09f" }} />
+            </g>
+            <circle cx="64.05" cy="63.9" r="4.54" style={{ fill: "#09f" }} />
+            <rect
+              x="71.04"
+              y="61.76"
+              width="15.87"
+              height="3.8"
+              rx="1.9"
+              style={{ fill: "#09f" }}
+            />
+            <rect
+              x="54.25"
+              y="46.25"
+              width="22.02"
+              height="3.8"
+              rx="1.9"
+              transform="translate(15.9 111.75) rotate(-90)"
+              style={{ fill: "#09f" }}
+            />
+          </svg>
+        ),
         title: "Time Savings",
         desc: "You can request new videos, ask for revisions through an intuitive and engaging portal.",
       },
       {
-        icon: "",
+        icon: (
+          <svg
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 127.67 127.67"
+          >
+            <circle
+              cx="63.83"
+              cy="63.83"
+              r="63.83"
+              style={{ fill: "#02cd73", opacity: "0.15" }}
+            />
+            <path
+              d="M65.49,34.17h0A3.85,3.85,0,0,1,69.34,38v.31c5.19.88,10.29,3.33,12.9,8a3.91,3.91,0,0,1-3.08,5.74h0a4,4,0,0,1-3.8-1.95,8.7,8.7,0,0,0-6-3.93V61.94c8.34.31,16,4.55,16,14.5,0,10.88-7.71,14.58-16,16.12v.85a3.85,3.85,0,0,1-3.85,3.86h0a3.86,3.86,0,0,1-3.86-3.86v-.85c-5.32-.91-10.77-4-13.66-8.88a3.86,3.86,0,0,1,3.32-5.86h0a3.76,3.76,0,0,1,3.3,1.88,12.21,12.21,0,0,0,7,5.46V68.88C49.21,70.11,41.73,55.53,49.29,45.2a19.1,19.1,0,0,1,12.34-6.87V38A3.85,3.85,0,0,1,65.49,34.17ZM55.31,49.67A7.27,7.27,0,0,0,61.63,61V46.12c-2.47.62-4.86,1.7-6.25,3.55Zm14,35.49c10.11.3,11.73-16.2,0-15.43Z"
+              transform="translate(-1.21 -1.66)"
+              style={{ fill: "#02cd73" }}
+            />
+          </svg>
+        ),
         title: "Cost Efficiency",
         desc: "Say goodbye to clunky video software and hello to one-click editing online. No training needed.",
       },
       {
-        icon: "",
+        icon: (
+          <svg
+            id="Layer_1"
+            xmlns="http://www.w3.org/2000/svg"
+            viewBox="0 0 127.67 127.67"
+          >
+            <g style={{ opacity: "0.15" }}>
+              <circle
+                cx="63.83"
+                cy="63.83"
+                r="63.83"
+                style={{ fill: "#f8a438" }}
+              />
+            </g>
+            <path
+              d="M34.07,37.42l1.24,2.51a1.54,1.54,0,0,0,1.16.84l2.77.41a1.55,1.55,0,0,1,.86,2.64l-2,2a1.53,1.53,0,0,0-.45,1.37l.47,2.76a1.55,1.55,0,0,1-2.24,1.64L33.4,50.23a1.59,1.59,0,0,0-1.44,0l-2.48,1.31a1.55,1.55,0,0,1-2.25-1.64l.47-2.76a1.55,1.55,0,0,0-.44-1.37l-2-2a1.55,1.55,0,0,1,.86-2.64l2.77-.41a1.55,1.55,0,0,0,1.17-.84l1.24-2.51A1.55,1.55,0,0,1,34.07,37.42Z"
+              transform="translate(-1.21 -1.66)"
+              style={{ fill: "#f8a438" }}
+            />
+            <rect
+              x="47.32"
+              y="38.48"
+              width="54.52"
+              height="8"
+              rx="4"
+              style={{ fill: "#f8a438" }}
+            />
+            <path
+              d="M34.07,58.79l1.24,2.52a1.54,1.54,0,0,0,1.16.84l2.77.41a1.55,1.55,0,0,1,.86,2.64l-2,2a1.53,1.53,0,0,0-.45,1.37l.47,2.76a1.54,1.54,0,0,1-2.24,1.63l-2.48-1.3a1.53,1.53,0,0,0-1.44,0l-2.48,1.3a1.55,1.55,0,0,1-2.25-1.63l.47-2.76a1.55,1.55,0,0,0-.44-1.37l-2-2a1.55,1.55,0,0,1,.86-2.64l2.77-.41a1.55,1.55,0,0,0,1.17-.84l1.24-2.52A1.55,1.55,0,0,1,34.07,58.79Z"
+              transform="translate(-1.21 -1.66)"
+              style={{ fill: "#f8a438" }}
+            />
+            <rect
+              x="47.32"
+              y="59.86"
+              width="54.52"
+              height="8"
+              rx="4"
+              style={{ fill: "#f8a438" }}
+            />
+            <path
+              d="M34.07,80.17l1.24,2.51a1.53,1.53,0,0,0,1.16.85l2.77.4a1.55,1.55,0,0,1,.86,2.64l-2,2a1.52,1.52,0,0,0-.45,1.37l.47,2.76a1.54,1.54,0,0,1-2.24,1.63L33.4,93A1.53,1.53,0,0,0,32,93l-2.48,1.3a1.55,1.55,0,0,1-2.25-1.63l.47-2.76a1.54,1.54,0,0,0-.44-1.37l-2-2a1.55,1.55,0,0,1,.86-2.64l2.77-.4a1.54,1.54,0,0,0,1.17-.85l1.24-2.51A1.55,1.55,0,0,1,34.07,80.17Z"
+              transform="translate(-1.21 -1.66)"
+              style={{ fill: "#f8a438" }}
+            />
+            <rect
+              x="47.32"
+              y="81.24"
+              width="54.52"
+              height="8"
+              rx="4"
+              style={{ fill: "#f8a438" }}
+            />
+          </svg>
+        ),
         title: "Unmatched Skills",
         desc: "Our team has video editors with over 10 years of experience.",
       },
