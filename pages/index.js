@@ -257,7 +257,7 @@ const Logos = styled.section`
   }
 
   @media only screen and (max-width: 1340px) {
-    margin-top: 5rem;
+    margin: 5rem auto 10rem auto;
 
     h5 {
       font-size: 1.2rem;
@@ -278,7 +278,7 @@ const Logos = styled.section`
 
 const FeatureWrapper = styled.section`
   @media only screen and (max-width: 1340px) {
-    padding: 16rem 3rem 8rem 3rem;
+    padding: 0 3rem;
   }
 `;
 
@@ -291,6 +291,7 @@ const Features = styled.div`
   margin-left: auto;
   margin-right: auto;
 `;
+
 const Feature = styled.div`
   display: flex;
   background: ${({ bg }) =>
