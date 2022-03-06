@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState, Fragment } from "react";
 import styled from "styled-components";
 import Link from "next/link";
@@ -17,6 +18,7 @@ import {
 } from "../constants/data";
 import banner_01 from "../public/banner_01@2x.png";
 import banner_02 from "../public/banner_02@2x.png";
+import demoreel from "../public/demoreel.mp4";
 
 const Home = () => {
   const [menu, showMenu] = useState(false);
@@ -38,35 +40,13 @@ const Home = () => {
                     <a>Get Started</a>
                   </Link>
                 </span>
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="80%"
-                  height="auto"
-                  viewBox="0 0 848 479"
-                >
-                  <defs>
-                    <radialGradient
-                      id="radial-gradient"
-                      cx="0.967"
-                      cy="0"
-                      r="2.048"
-                      gradientTransform="matrix(-0.016, 1, -0.571, -0.009, 0.983, -0.967)"
-                      gradientUnits="objectBoundingBox"
-                    >
-                      <stop offset="0" stopColor="#fff" />
-                      <stop offset="1" stopColor="#fff" />
-                    </radialGradient>
-                  </defs>
-                  <rect
-                    id="Rectangle_2"
-                    data-name="Rectangle 2"
-                    width="848"
-                    height="479"
-                    rx="20"
-                    fill="url(#radial-gradient)"
-                  />
-                </svg>
               </ContentWrapper>
+              <video
+                autoPlay={true}
+                muted
+                loop
+                src={require("../public/demoreel.mp4")}
+              />
             </Header>
             <Logos>
               <h5>Used by top designers from the world's top companies</h5>
@@ -172,11 +152,25 @@ export default Home;
 const Container = styled.main``;
 
 const Header = styled.header`
-  padding: 16rem 0;
-  background: var(--blue);
+  position: relative;
+  overflow: hidden;
+  height: 90rem;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+
+  video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+  }
 
   @media only screen and (max-width: 1340px) {
-    padding: 16rem 3rem 8rem 3rem;
+    height: 60rem;
   }
 `;
 
@@ -190,7 +184,7 @@ const ContentWrapper = styled.div`
   margin-right: auto;
 
   p {
-    color: var(--opacity-7);
+    color: #fff;
     margin-top: 2rem;
     text-align: center;
   }
@@ -222,14 +216,8 @@ const ContentWrapper = styled.div`
     }
   }
 
-  svg {
-    margin-top: 4.8rem;
-  }
-
   @media only screen and (max-width: 1340px) {
-    svg {
-      margin-top: 2.8rem;
-    }
+    padding: 0 3rem;
     p {
       margin-top: 1.4rem;
     }
@@ -242,7 +230,7 @@ const Logos = styled.section`
   align-items: center;
   width: 100%;
   max-width: 129rem;
-  margin: 12rem auto;
+  margin: 6rem auto 12rem auto;
 
   h5 {
     font-size: 1.8rem;
@@ -405,7 +393,7 @@ const MiniFeatures = styled.div`
 `;
 
 const Pricing = styled.section`
-  padding: 10rem 0;
+  padding: 12rem 0;
   background: #f2f6f9;
 
   @media only screen and (max-width: 1340px) {
@@ -422,7 +410,10 @@ const PricingContentWrapper = styled.div`
   margin-left: auto;
   margin-right: auto;
 
-  h2,
+  h2 {
+    margin: 0;
+  }
+
   p {
     margin-top: 2rem;
   }
@@ -452,7 +443,7 @@ const PricingWrapper = styled.div`
 `;
 
 const Testimonials = styled.section`
-  padding: 10rem 0;
+  padding: 12rem 0;
   background: var(--dark-gray);
 
   @media only screen and (max-width: 1340px) {
