@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import styled from "styled-components";
+import logo from "../public/logo.svg";
 
 const NavBar = ({ menu, onOpenMobileMenu }) => {
   const [show, setShow] = useState(false);
@@ -25,13 +27,7 @@ const NavBar = ({ menu, onOpenMobileMenu }) => {
     <MainContainer animation={animation} bg={show}>
       <Container animation={animation} bg={show}>
         <BlockOne>
-          <img
-            className="navbar-container__logo"
-            src={"/logo.svg"}
-            alt="vidbox logo"
-            width={140}
-            height={36}
-          />
+          <Image src={logo} alt="Vidbox Logo" width={140} height={36} />
           <Menu>
             <Link href="/">
               <a>Features</a>
