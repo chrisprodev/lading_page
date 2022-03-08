@@ -120,6 +120,7 @@ const BlockTwo = styled.div`
     }
 
     :hover {
+      color: #fff;
       background: var(--opacity-15);
     }
   }
