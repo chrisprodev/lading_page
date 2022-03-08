@@ -42,7 +42,7 @@ const Container = styled.div`
   right: 0;
   bottom: 0;
   left: 0;
-  background: var(--blue);
+  background: var(--dark-gray);
   z-index: 1;
 `;
 const Menu = styled.div`

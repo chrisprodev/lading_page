@@ -18,7 +18,6 @@ import {
 } from "../constants/data";
 import banner_01 from "../public/banner_01@2x.png";
 import banner_02 from "../public/banner_02@2x.png";
-import demoreel from "../public/demoreel.mp4";
 
 const Home = () => {
   const [menu, showMenu] = useState(false);
