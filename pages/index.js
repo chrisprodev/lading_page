@@ -256,7 +256,7 @@ const Logos = styled.section`
   }
 
   @media only screen and (max-width: 1340px) {
-    margin: 5rem auto 10rem auto;
+    margin: 5rem auto 7rem auto;
 
     h5 {
       font-size: 1.2rem;
@@ -264,7 +264,7 @@ const Logos = styled.section`
 
     .logos__container {
       justify-content: center;
-      width: 100%;
+      width: 70%;
 
       svg {
         height: 2.4rem;
