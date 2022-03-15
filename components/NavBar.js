@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import Link from "next/link";
+import { Link } from "react-scroll";
 import Image from "next/image";
 import styled from "styled-components";
 import logo from "../public/logo.svg";
@@ -27,16 +27,46 @@ const NavBar = ({ menu, onOpenMobileMenu }) => {
     <MainContainer animation={animation} bg={show}>
       <Container animation={animation} bg={show}>
         <BlockOne>
-          <Image src={logo} alt="Vidbox Logo" width={140} height={36} />
+          <Link
+            className="logo"
+            to="home"
+            spy={true}
+            offset={0}
+            smooth={"easeInOutQuart"}
+            duration={800}
+          >
+            <Image src={logo} alt="Vidbox Logo" width={140} height={36} />
+          </Link>
           <Menu>
-            <Link href="/">
-              <a>Features</a>
+            <Link
+              to="features"
+              activeClass="active"
+              spy={true}
+              offset={-120}
+              smooth={"easeInOutQuart"}
+              duration={800}
+            >
+              Features
             </Link>
-            <Link href="/">
-              <a>Pricing</a>
+            <Link
+              to="pricing"
+              activeClass="active"
+              spy={true}
+              offset={-90}
+              smooth={"easeInOutQuart"}
+              duration={800}
+            >
+              Pricing
             </Link>
-            <Link href="/">
-              <a>Contact us</a>
+            <Link
+              to="faqs"
+              activeClass="active"
+              spy={true}
+              offset={-130}
+              smooth={"easeInOutQuart"}
+              duration={800}
+            >
+              FAQs
             </Link>
           </Menu>
         </BlockOne>
@@ -89,9 +119,8 @@ const BlockOne = styled.div`
   display: flex;
   align-items: center;
 
-  .navbar-container__logo {
-    width: 14rem;
-    height: 3.6rem;
+  .logo {
+    cursor: pointer;
   }
 `;
 
@@ -149,10 +178,16 @@ const BlockTwo = styled.div`
 
 const Menu = styled.div`
   a {
+    cursor: pointer;
     color: var(--opacity-7);
     margin-left: 4rem;
     font-size: 1.6rem;
     transition: color 150ms ease;
+
+    &.active {
+      color: #fff;
+    }
+
     :hover {
       color: #fff;
     }

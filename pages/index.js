@@ -9,6 +9,8 @@ import MobileMenu from "../components/MobileMenu";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Faq from "../components/Faq";
+import banner_01 from "../public/banner_01@2x.png";
+import banner_02 from "../public/banner_02@2x.png";
 import {
   faqs,
   features,
@@ -16,8 +18,6 @@ import {
   pricingTable,
   testimonials,
 } from "../constants/data";
-import banner_01 from "../public/banner_01@2x.png";
-import banner_02 from "../public/banner_02@2x.png";
 
 const Home = () => {
   const [menu, showMenu] = useState(false);
@@ -26,11 +26,11 @@ const Home = () => {
     <>
       <NavBar onOpenMobileMenu={() => showMenu(!menu)} menu={menu} />
       {menu ? (
-        <MobileMenu />
+        <MobileMenu onOpenMobileMenu={() => showMenu(false)} />
       ) : (
         <>
           <Container>
-            <Header>
+            <Header id="home">
               <ContentWrapper>
                 <h1>Explainer videos made simple</h1>
                 <p>Scale your business with unlimited video editing.</p>
@@ -53,7 +53,7 @@ const Home = () => {
                 {logosData.map(logo => logo)}
               </div>
             </Logos>
-            <FeatureWrapper>
+            <FeatureWrapper id="features">
               <Features>
                 {features.map(feature => (
                   <Fragment key={feature.mainTitle}>
@@ -96,7 +96,7 @@ const Home = () => {
                 ))}
               </Features>
             </FeatureWrapper>
-            <Pricing>
+            <Pricing id="pricing">
               <PricingContentWrapper>
                 <h2>Find the plan that is right for you</h2>
                 <p>No hiden fees.</p>
@@ -127,7 +127,7 @@ const Home = () => {
                 </TestimonialsGrid>
               </TestimonialsWrapper>
             </Testimonials>
-            <FAQs>
+            <FAQs id="faqs">
               <h2>Frequently asked questions</h2>
               {faqs.map(question => (
                 <Faq

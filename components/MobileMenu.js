@@ -1,19 +1,43 @@
 import React from "react";
 import styled from "styled-components";
-import Link from "next/link";
+import { Link } from "react-scroll";
 
-const MobileMenu = () => {
+const MobileMenu = ({ onOpenMobileMenu }) => {
   return (
     <Container>
       <Menu>
-        <Link href="/">
-          <a>Features</a>
+        <Link
+          onClick={onOpenMobileMenu}
+          to="features"
+          activeClass="active"
+          spy={true}
+          offset={-120}
+          smooth={"easeInOutQuart"}
+          duration={800}
+        >
+          Features
         </Link>
-        <Link href="/">
-          <a>Pricing</a>
+        <Link
+          onClick={onOpenMobileMenu}
+          to="pricing"
+          activeClass="active"
+          spy={true}
+          offset={-90}
+          smooth={"easeInOutQuart"}
+          duration={800}
+        >
+          Pricing
         </Link>
-        <Link href="/">
-          <a>Contact us</a>
+        <Link
+          onClick={onOpenMobileMenu}
+          to="faqs"
+          activeClass="active"
+          spy={true}
+          offset={-130}
+          smooth={"easeInOutQuart"}
+          duration={800}
+        >
+          FAQs
         </Link>
       </Menu>
       <Buttons>
@@ -57,6 +81,11 @@ const Menu = styled.div`
     color: var(--opacity-7);
     font-size: 2.6rem;
     transition: color 150ms ease;
+
+    &.active {
+      color: #fff;
+    }
+
     :hover {
       color: var(--white);
     }
