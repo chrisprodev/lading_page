@@ -1,11 +1,10 @@
 /* eslint-disable react/no-unescaped-entities */
-import { useState, Fragment } from "react";
+import { Fragment } from "react";
 import styled from "styled-components";
 import Link from "next/link";
 import Image from "next/image";
 import TestimonialCard from "../components/TestimonialCard";
 import PricingCard from "../components/PricingCard";
-import MobileMenu from "../components/MobileMenu";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Faq from "../components/Faq";
@@ -20,128 +19,116 @@ import {
 } from "../constants/data";
 
 const Home = () => {
-  const [menu, showMenu] = useState(false);
-
   return (
     <>
-      <NavBar onOpenMobileMenu={() => showMenu(!menu)} menu={menu} />
-      {menu ? (
-        <MobileMenu onOpenMobileMenu={() => showMenu(false)} />
-      ) : (
-        <>
-          <Container>
-            <Header id="home">
-              <ContentWrapper>
-                <h1>Explainer videos made simple</h1>
-                <p>Scale your business with unlimited video editing.</p>
-                <span className="header__btn">
-                  <Link href="/">
-                    <a>Get Started</a>
-                  </Link>
-                </span>
-              </ContentWrapper>
-              <video
-                autoPlay={true}
-                muted
-                loop
-                src={require("../public/demoreel.mp4")}
-              />
-            </Header>
-            <Logos>
-              <h5>Used by top designers from the world's top companies</h5>
-              <div className="logos__container">
-                {logosData.map(logo => logo)}
-              </div>
-            </Logos>
-            <FeatureWrapper id="features">
-              <Features>
-                {features.map(feature => (
-                  <Fragment key={feature.mainTitle}>
-                    <Feature bg={feature.color}>
-                      <VideoContainer bg={feature.color}>
-                        <div className="image-holder">
-                          <Image
-                            src={
-                              feature.image === "banner_01"
-                                ? banner_01
-                                : banner_02
-                            }
-                            alt={feature.mainTitle}
-                            layout="responsive"
-                            width={feature.width}
-                            height={feature.height}
-                          />
-                        </div>
-                      </VideoContainer>
-                      <div className="feature__main-feature">
-                        <h2>{feature.mainTitle}</h2>
-                        <p className="main-feature__description">
-                          {feature.mainDesc}
-                        </p>
-                      </div>
-                    </Feature>
-                    <MiniFeatures>
-                      {feature.subFeats.map(subFeat => (
-                        <div
-                          className="mini-features__description"
-                          key={subFeat.title}
-                        >
-                          {subFeat.icon && subFeat.icon}
-                          <h4>{subFeat.title}</h4>
-                          <p>{subFeat.desc}</p>
-                        </div>
-                      ))}
-                    </MiniFeatures>
-                  </Fragment>
-                ))}
-              </Features>
-            </FeatureWrapper>
-            <Pricing id="pricing">
-              <PricingContentWrapper>
-                <h2>Find the plan that is right for you</h2>
-                <p>No hiden fees.</p>
-                <PricingWrapper>
-                  {pricingTable.map(card => (
-                    <PricingCard {...card} key={card.name} />
+      <NavBar />
+      <Container>
+        <Header id="home">
+          <ContentWrapper>
+            <h1>Explainer videos made simple</h1>
+            <p>Scale your business with unlimited video editing.</p>
+            <span className="header__btn">
+              <Link href="/">
+                <a>Get Started</a>
+              </Link>
+            </span>
+          </ContentWrapper>
+          <video
+            autoPlay={true}
+            muted
+            loop
+            src={require("../public/demoreel.mp4")}
+          />
+        </Header>
+        <Logos>
+          <h5>Used by top designers from the world's top companies</h5>
+          <div className="logos__container">{logosData.map(logo => logo)}</div>
+        </Logos>
+        <FeatureWrapper id="features">
+          <Features>
+            {features.map(feature => (
+              <Fragment key={feature.mainTitle}>
+                <Feature bg={feature.color}>
+                  <VideoContainer bg={feature.color}>
+                    <div className="image-holder">
+                      <Image
+                        src={
+                          feature.image === "banner_01" ? banner_01 : banner_02
+                        }
+                        alt={feature.mainTitle}
+                        layout="responsive"
+                        width={feature.width}
+                        height={feature.height}
+                      />
+                    </div>
+                  </VideoContainer>
+                  <div className="feature__main-feature">
+                    <h2>{feature.mainTitle}</h2>
+                    <p className="main-feature__description">
+                      {feature.mainDesc}
+                    </p>
+                  </div>
+                </Feature>
+                <MiniFeatures>
+                  {feature.subFeats.map(subFeat => (
+                    <div
+                      className="mini-features__description"
+                      key={subFeat.title}
+                    >
+                      {subFeat.icon && subFeat.icon}
+                      <h4>{subFeat.title}</h4>
+                      <p>{subFeat.desc}</p>
+                    </div>
                   ))}
-                </PricingWrapper>
-              </PricingContentWrapper>
-            </Pricing>
-            <Testimonials>
-              <TestimonialsWrapper>
-                <h2>Take your business to the next level</h2>
-                <p className="testimonials__sub-title">
-                  Become part of a growing community of innovative
-                  Entrepreneurs, Marketers and Agencies.
-                </p>
-                <TestimonialsGrid>
-                  {testimonials.map(element => (
-                    <TestimonialCard
-                      key={element.user}
-                      user={element.user}
-                      account={element.account}
-                      body={element.description}
-                      date={element.date}
-                    />
-                  ))}
-                </TestimonialsGrid>
-              </TestimonialsWrapper>
-            </Testimonials>
-            <FAQs id="faqs">
-              <h2>Frequently asked questions</h2>
-              {faqs.map(question => (
-                <Faq
-                  key={question.title}
-                  title={question.title}
-                  content={question.content}
-                  initialState={question.initialState}
+                </MiniFeatures>
+              </Fragment>
+            ))}
+          </Features>
+        </FeatureWrapper>
+        <Pricing id="pricing">
+          <PricingContentWrapper>
+            <h2>Find the plan that is right for you</h2>
+            <p>No hiden fees.</p>
+            <PricingWrapper>
+              {pricingTable.map(card => (
+                <PricingCard {...card} key={card.name} />
+              ))}
+            </PricingWrapper>
+          </PricingContentWrapper>
+        </Pricing>
+        <Testimonials>
+          <TestimonialsWrapper>
+            <h2>Take your business to the next level</h2>
+            <p className="testimonials__sub-title">
+              Become part of a growing community of innovative Entrepreneurs,
+              Marketers and Agencies.
+            </p>
+            <TestimonialsGrid>
+              {testimonials.map(element => (
+                <TestimonialCard
+                  key={element.user}
+                  user={element.user}
+                  account={element.account}
+                  body={element.description}
+                  date={element.date}
                 />
               ))}
-            </FAQs>
-          </Container>
-          <Footer />
-        </>
-      )}
+            </TestimonialsGrid>
+          </TestimonialsWrapper>
+        </Testimonials>
+        <FAQs id="faqs">
+          <h2>Frequently asked questions</h2>
+          {faqs.map(question => (
+            <Faq
+              key={question.title}
+              title={question.title}
+              content={question.content}
+              initialState={question.initialState}
+            />
+          ))}
+        </FAQs>
+      </Container>
+      <Footer />
     </>
   );
 };

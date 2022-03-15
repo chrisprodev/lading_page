@@ -3,10 +3,12 @@ import { Link } from "react-scroll";
 import Image from "next/image";
 import styled from "styled-components";
 import logo from "../public/logo.svg";
+import MobileMenu from "./MobileMenu";
 
-const NavBar = ({ menu, onOpenMobileMenu }) => {
+const NavBar = () => {
   const [show, setShow] = useState(false);
   const [animation, setAnimation] = useState(false);
+  const [displayMenu, setDisplayMenu] = useState(false);
 
   useEffect(() => {
     window.scrollTo(0, 0);
@@ -24,70 +26,78 @@ const NavBar = ({ menu, onOpenMobileMenu }) => {
   };
 
   return (
-    <MainContainer animation={animation} bg={show}>
-      <Container animation={animation} bg={show}>
-        <BlockOne>
-          <Link
-            className="logo"
-            to="home"
-            spy={true}
-            offset={0}
-            smooth={"easeInOutQuart"}
-            duration={800}
+    <>
+      <MainContainer animation={animation} bg={show}>
+        <Container animation={animation} bg={show}>
+          <BlockOne>
+            <Link
+              className="logo"
+              to="home"
+              spy={true}
+              offset={0}
+              smooth={"easeInOutQuart"}
+              duration={800}
+            >
+              <Image src={logo} alt="Vidbox Logo" width={140} height={36} />
+            </Link>
+            <Menu>
+              <Link
+                to="features"
+                activeClass="active"
+                spy={true}
+                offset={-120}
+                smooth={"easeInOutQuart"}
+                duration={800}
+              >
+                Features
+              </Link>
+              <Link
+                to="pricing"
+                activeClass="active"
+                spy={true}
+                offset={-90}
+                smooth={"easeInOutQuart"}
+                duration={800}
+              >
+                Pricing
+              </Link>
+              <Link
+                to="faqs"
+                activeClass="active"
+                spy={true}
+                offset={-130}
+                smooth={"easeInOutQuart"}
+                duration={800}
+              >
+                FAQs
+              </Link>
+            </Menu>
+          </BlockOne>
+          <BlockTwo>
+            <span className="navbar-container__loginbtn">
+              <Link href="/">
+                <a>Login</a>
+              </Link>
+            </span>
+            <span className="navbar-container__demobtn">
+              <Link href="/">
+                <a>Request a Demo</a>
+              </Link>
+            </span>
+          </BlockTwo>
+          <Hamburguer
+            onClick={() => setDisplayMenu(!displayMenu)}
+            menu={displayMenu}
           >
-            <Image src={logo} alt="Vidbox Logo" width={140} height={36} />
-          </Link>
-          <Menu>
-            <Link
-              to="features"
-              activeClass="active"
-              spy={true}
-              offset={-120}
-              smooth={"easeInOutQuart"}
-              duration={800}
-            >
-              Features
-            </Link>
-            <Link
-              to="pricing"
-              activeClass="active"
-              spy={true}
-              offset={-90}
-              smooth={"easeInOutQuart"}
-              duration={800}
-            >
-              Pricing
-            </Link>
-            <Link
-              to="faqs"
-              activeClass="active"
-              spy={true}
-              offset={-130}
-              smooth={"easeInOutQuart"}
-              duration={800}
-            >
-              FAQs
-            </Link>
-          </Menu>
-        </BlockOne>
-        <BlockTwo>
-          <span className="navbar-container__loginbtn">
-            <Link href="/">
-              <a>Login</a>
-            </Link>
-          </span>
-          <span className="navbar-container__demobtn">
-            <Link href="/">
-              <a>Request a Demo</a>
-            </Link>
-          </span>
-        </BlockTwo>
-        <Hamburguer onClick={onOpenMobileMenu} menu={menu}>
-          <span />
-          <span />
-        </Hamburguer>
-      </Container>
-    </MainContainer>
+            <span />
+            <span />
+          </Hamburguer>
+        </Container>
+      </MainContainer>
+      {displayMenu && (
+        <MobileMenu onDisplayMenu={() => setDisplayMenu(!displayMenu)} />
+      )}
+    </>
   );
 };
 

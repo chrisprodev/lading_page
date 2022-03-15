@@ -2,12 +2,12 @@ import React from "react";
 import styled from "styled-components";
 import { Link } from "react-scroll";
 
-const MobileMenu = ({ onOpenMobileMenu }) => {
+const MobileMenu = ({ onDisplayMenu }) => {
   return (
     <Container>
       <Menu>
         <Link
-          onClick={onOpenMobileMenu}
+          onClick={onDisplayMenu}
           to="features"
           activeClass="active"
           spy={true}
@@ -18,7 +18,7 @@ const MobileMenu = ({ onOpenMobileMenu }) => {
           Features
         </Link>
         <Link
-          onClick={onOpenMobileMenu}
+          onClick={onDisplayMenu}
           to="pricing"
           activeClass="active"
           spy={true}
@@ -29,7 +29,7 @@ const MobileMenu = ({ onOpenMobileMenu }) => {
           Pricing
         </Link>
         <Link
-          onClick={onOpenMobileMenu}
+          onClick={onDisplayMenu}
           to="faqs"
           activeClass="active"
           spy={true}
