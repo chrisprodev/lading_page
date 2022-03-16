@@ -74,16 +74,8 @@ const NavBar = () => {
             </Menu>
           </BlockOne>
           <BlockTwo>
-            <span className="navbar-container__loginbtn">
-              <Link href="/">
-                <a>Login</a>
-              </Link>
-            </span>
-            <span className="navbar-container__demobtn">
-              <Link href="/">
-                <a>Request a Demo</a>
-              </Link>
-            </span>
+            <span className="navbar-container__loginbtn">Login</span>
+            <span className="navbar-container__demobtn">Request a Demo</span>
           </BlockTwo>
           <Hamburguer
             onClick={() => setDisplayMenu(!displayMenu)}
@@ -148,11 +140,9 @@ const BlockTwo = styled.div`
     border-radius: 1rem;
     margin-right: 2rem;
     transition: all 150ms ease;
-
-    a {
-      color: var(--opacity-7);
-      font-size: 1.6rem;
-    }
+    user-select: none;
+    color: var(--opacity-7);
+    font-size: 1.6rem;
 
     :hover {
       color: #fff;
@@ -171,10 +161,8 @@ const BlockTwo = styled.div`
     border: none;
     background: #fff;
     transition: all 150ms ease;
-
-    a {
-      font-size: 1.6rem;
-    }
+    user-select: none;
+    font-size: 1.6rem;
 
     :hover {
       background: var(--opacity-7);

@@ -41,16 +41,8 @@ const MobileMenu = ({ onDisplayMenu }) => {
         </Link>
       </Menu>
       <Buttons>
-        <span className="navbar-container__loginbtn">
-          <Link href="/">
-            <a>Login</a>
-          </Link>
-        </span>
-        <span className="navbar-container__demobtn">
-          <Link href="/">
-            <a>Request a Demo</a>
-          </Link>
-        </span>
+        <span className="navbar-container__loginbtn">Login</span>
+        <span className="navbar-container__demobtn">Request a Demo</span>
       </Buttons>
     </Container>
   );
@@ -100,17 +92,13 @@ const Buttons = styled.div`
     margin-top: 2.2rem;
     cursor: pointer;
     transition: all 150ms ease;
-
-    a {
-      color: var(--opacity-7);
-      font-size: 2.6rem;
-      transition: color 150ms ease;
-    }
+    user-select: none;
+    color: var(--opacity-7);
+    font-size: 2.6rem;
+    transition: color 150ms ease;
 
     :hover {
-      a {
-        color: var(--white);
-      }
+      color: var(--white);
     }
   }
 
@@ -126,12 +114,10 @@ const Buttons = styled.div`
     border: none;
     background: #fff;
     transition: all 150ms ease;
-
-    a {
-      color: var(--black);
-      font-weight: 500;
-      font-size: 1.6rem;
-    }
+    user-select: none;
+    color: var(--black);
+    font-weight: 500;
+    font-size: 1.6rem;
 
     :hover {
       background: var(--opacity-7);
