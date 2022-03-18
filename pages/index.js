@@ -8,8 +8,8 @@ import PricingCard from "../components/PricingCard";
 import NavBar from "../components/NavBar";
 import Footer from "../components/Footer";
 import Faq from "../components/Faq";
-import banner_01 from "../public/banner_01@2x.png";
-import banner_02 from "../public/banner_02@2x.png";
+import banner_01 from "../public/images/banner_01@2x.png";
+import banner_02 from "../public/images/banner_02@2x.png";
 import {
   faqs,
   features,
