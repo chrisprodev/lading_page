@@ -604,7 +604,7 @@ export const faqs = [
   },
 ];
 
-export const testimonials = [
+export const testimonialsData = [
   {
     user: "Stephanie",
     account: "@steptalks",
