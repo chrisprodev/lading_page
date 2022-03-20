@@ -8,7 +8,7 @@ import { features } from "../constants/data";
 import banner_01 from "../public/images/banner_01@2x.png";
 import banner_02 from "../public/images/banner_02@2x.png";
 
-const Feature = () => {
+const Features = () => {
   const animationControl = useAnimation();
   const { ref, inView } = useInView();
 
@@ -25,7 +25,7 @@ const Feature = () => {
   }
 
   return (
-    <Container
+    <FeatureWrapper
       initial={{
         y: 40,
         opacity: 0,
@@ -33,43 +33,51 @@ const Feature = () => {
       animate={animationControl}
       ref={ref}
     >
-      {features.map(feature => (
-        <Fragment key={feature.mainTitle}>
-          <FeatContent bg={feature.color}>
-            <VideoContainer bg={feature.color}>
-              <div className="image-holder">
-                <Image
-                  src={feature.image === "banner_01" ? banner_01 : banner_02}
-                  alt={feature.mainTitle}
-                  layout="responsive"
-                  width={feature.width}
-                  height={feature.height}
-                />
+      <Container>
+        {features.map(feature => (
+          <Fragment key={feature.mainTitle}>
+            <FeatContent bg={feature.color}>
+              <VideoContainer bg={feature.color}>
+                <div className="image-holder">
+                  <Image
+                    src={feature.image === "banner_01" ? banner_01 : banner_02}
+                    alt={feature.mainTitle}
+                    layout="responsive"
+                    width={feature.width}
+                    height={feature.height}
+                  />
+                </div>
+              </VideoContainer>
+              <div className="feature__main-feature">
+                <h2>{feature.mainTitle}</h2>
+                <p className="main-feature__description">{feature.mainDesc}</p>
               </div>
-            </VideoContainer>
-            <div className="feature__main-feature">
-              <h2>{feature.mainTitle}</h2>
-              <p className="main-feature__description">{feature.mainDesc}</p>
-            </div>
-          </FeatContent>
-          <MiniFeatures>
-            {feature.subFeats.map(subFeat => (
-              <div className="mini-features__description" key={subFeat.title}>
-                {subFeat.icon && subFeat.icon}
-                <h4>{subFeat.title}</h4>
-                <p>{subFeat.desc}</p>
-              </div>
-            ))}
-          </MiniFeatures>
-        </Fragment>
-      ))}
-    </Container>
+            </FeatContent>
+            <MiniFeatures>
+              {feature.subFeats.map(subFeat => (
+                <div className="mini-features__description" key={subFeat.title}>
+                  {subFeat.icon && subFeat.icon}
+                  <h4>{subFeat.title}</h4>
+                  <p>{subFeat.desc}</p>
+                </div>
+              ))}
+            </MiniFeatures>
+          </Fragment>
+        ))}
+      </Container>
+    </FeatureWrapper>
   );
 };
 
-export default Feature;
+export default Features;
 
-const Container = styled(motion.div)`
+const FeatureWrapper = styled(motion.section)`
+  @media only screen and (max-width: 1340px) {
+    padding: 0 3rem;
+  }
+`;
+
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
